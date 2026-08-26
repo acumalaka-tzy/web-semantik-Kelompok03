@@ -41,7 +41,7 @@ Informasi lain yang menurut Anda menarik: anggota dari Jaringan Universitas ASEA
 ## 4. Pertanyaan Evaluasi
 
 ### 1. Apa perbedaan web tradisional dan Web Semantik?
-Jawaban: ...
+Jawaban: Perbedaan web semantik dengan traditional dapat dilihat dari siapa yang akan memproses dan memahami data.  jadi web traditional dibuat agar mudah dibaca dan dilihat oleh manusia sedangkan web semantik untuk data dan informasi dapat dipahami,diolah,serta dihubungkan secara otomatis oleh mesin atau komputer
 
 ### 2. Mengapa entitas membutuhkan identifier unik?
 Jawaban: ...
