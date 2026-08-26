@@ -13,8 +13,18 @@ Informasi lain yang menurut Anda menarik: anggota dari Jaringan Universitas ASEA
 ## 2. Entitas, Atribut, dan Relasi
 
 | Informasi | Kategori | Alasan |
-|---|---|---|
-| ... | ... | ... |
+| Universitas Sumatera Utara | Entitas | Punya identitas sendiri sebagai sebuah lembaga dan dapat dibedakan dari universitas lain |
+| Indonesia | Entitas | Punya identitas sendiri sebagai sebuah negara dan dapat dibedakan dari negara lain |
+| Jaringan Universitas ASEAN | Entitas | Punya identitas sendiri sebagai organisasi/jaringan dan dapat dibedakan dari organisasi lain |
+| ASEA-UNINET | Entitas | identitas sendiri sebagai sebuah organisasi/jaringan universitas dan dapat dibedakan dari organisasi lain |
+| Identifier Q4200341 | Atribut | bukan objek yang berdiri sendiri, melainkan kode yang menjelaskan entitas USU di wikidata |
+| Deskripsi : universitas di Indonesia | Atribut | informasi singkat yang menjelaskan apa itu entitas USU, bukan objek tersendiri |
+| Alamat kampus : Jalan Dr. T. Mansur No. 9, Padang Bulan | Atribut | nilai yang menjelaskan lokasi fisik entitas USU, bukan objek yang berdiri sendiri |
+| Tahun pendirian : 4 Juli 1952 | Atribut | tanggal yang menjelaskan kapan entitas USU didirikan, bukan objek tersendiri |
+| Website resmi : https://www.usu.ac.id/ | Atribut | tautan yang menjelaskan sarana informasi resmi entitas USU, bukan objek tersendiri |
+| USU -> country -> Indonesia | Relasi | menyatakan hubungan USU berada di negara Indonesia |
+| USU -> member of -> Jaringan Universitas Asean | Relasi | menyatakan hubungan keanggotaan antara entitas USU dengan entitas Jaringan Universitas ASEAN |
+| USU -> member of -> ASEA-UNINET | Relasi | menyatakan hubungan keanggotaan antara entitas USU dengan entitas ASEA-UNINET |
 
 ## 3. Eksplorasi Schema.org
 
