@@ -44,7 +44,7 @@
 Jawaban: Perbedaan web semantik dengan traditional dapat dilihat dari siapa yang akan memproses dan memahami data.  jadi web traditional dibuat agar mudah dibaca dan dilihat oleh manusia sedangkan web semantik untuk data dan informasi dapat dipahami,diolah,serta dihubungkan secara otomatis oleh mesin atau komputer
 
 ### 2. Mengapa entitas membutuhkan identifier unik?
-Jawaban: ...
+Jawaban: Entitas membutuhkan identifier unik agar setiap mahasiswa dapat dibedakan dengan jelas, meskipun ada mahasiswa yang memiliki nama yang sama. Misalnya, terdapat dua mahasiswa bernama “Andi”, maka keduanya dapat dibedakan menggunakan NIM seperti 231401001 dan 231401002. Dengan adanya identifier unik tersebut, sistem dapat mengetahui data, nilai, kelas, atau program studi yang dimiliki oleh masing-masing Andi tanpa tertukar. Jadi, identifier unik sangat penting untuk menghindari duplikasi dan kesalahan data serta memastikan setiap entitas dapat dikenali dan dihubungkan dengan tepat.
 
 ### 3. Jelaskan subject, predicate, dan object.
 Jawaban:
