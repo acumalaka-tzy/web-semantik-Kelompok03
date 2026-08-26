@@ -1,14 +1,14 @@
 # Pertemuan 1 - Pengenalan Web Semantik
 
 ## 1. Eksplorasi Wikidata   
-Nama entitas:univeersitas sumatera utara   
-Deskripsi entitas:universitas di indonesia  
-Identifier Wikidata yang diawali huruf Q:Q4200341  
-Negara:indoensia  
-Lokasi:Jalan Dr T Mansur No 9 Padang Bulan  
-Tahun atau tanggal pendirian, jika tersedia:4 Juli 1952   
-Website resmi:https://www.usu.ac.id/  
-Informasi lain yang menurut Anda menarik: anggota dari Jaringan Universitas ASEAN dan juga ASEA-UNINET  
+Nama entitas: Universitas Sumatera Utara
+Deskripsi entitas: Universitas di Indonesia  
+Identifier Wikidata yang diawali huruf Q: Q4200341  
+Negara: Indonesia  
+Lokasi: Jalan Dr T Mansur No 9 Padang Bulan  
+Tahun atau tanggal pendirian, jika tersedia: 4 Juli 1952   
+Website resmi: https://www.usu.ac.id/  
+Informasi lain yang menurut Anda menarik: Anggota dari Jaringan Universitas ASEAN dan juga ASEA-UNINET  
 
 ## 2. Entitas, Atribut, dan Relasi
 
