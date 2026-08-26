@@ -53,7 +53,12 @@ Jawaban:
 - Object merupakan suatu nilai, atribut atau entitas lain yang menjadi pelengkap atau tujuan dari predikat tersebut.
 
 ### 4. Apa keuntungan hubungan antarentitas?
-Jawaban: ...
+Jawaban:
+keuntungannya yaitu :
+- Tidak buat ambigu, contohnya "java" di teks biasa itu berarti pulau, bahasa program, atau kopi. Jadi kalau direprentasikan sebagai entitas dengan identitas jelas (URL), mesin tidak salah paham.
+- Mesin bisa nemuin fakta baru sendiri, misalnya mesin udag tau "Medan di Sumut" dan "Sumut di indonesia", mesin bisa menyimpulkan bahwa Medan itu di Indonesia, padahal belum ditulis.
+- Langsung dapat jawaban, jika kita nyari sesuatu di google kadabng jawaban langsung muncul di kotak pencariannya.
+- Gampang untuk diedit dan dilacak sumbernya, dengan menambahkan satu hubungan baru, kita bisa cek asalnya darimana.
 
 ### 5. Bagaimana Knowledge Graph membantu AI?
 Jawaban:
