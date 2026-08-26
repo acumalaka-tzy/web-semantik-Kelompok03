@@ -1,7 +1,7 @@
 # Pertemuan 1 - Pengenalan Web Semantik
 
 ## 1. Eksplorasi Wikidata   
-Nama entitas: Universitas Sumatera Utara
+Nama entitas: Universitas Sumatera Utara  
 Deskripsi entitas: Universitas di Indonesia  
 Identifier Wikidata yang diawali huruf Q: Q4200341  
 Negara: Indonesia  
