@@ -27,10 +27,16 @@ struktur xml yang saya buat adalah isi tentang  biodata saya sebagai mahasiswa t
 4. Apakah URI namespace harus dapat dibuka? ...
 
 ## 5. Pertanyaan Evaluasi
-1. Perbedaan XML dan HTML: perbedaan nya dalah di xml kegunaan nya untuk transfer data sedangkan di html  untuk penyajian data nya
-    atau lebih  tepatnya HTML dirancang untuk memfasilitasi transfer dokumen berbasis web atau bagaimana format tampilan dari data. Sedangkan XML lebih kepada struktur dan konteksnya  
+1. Perbedaan XML dan HTML:  
+Perbedaan nya adalah di XML kegunaan nya untuk transfer data sedangkan di HTML untuk penyajian data nya atau lebih tepatnya HTML dirancang untuk memfasilitasi transfer dokumen berbasis web atau bagaimana format tampilan dari data. Sedangkan XML lebih kepada struktur dan konteksnya
+
 2. Apa yang dimaksud well-formed? ...
+
 3. Perbedaan well-formed dan valid: ...
+
 4. Mengapa XSD lebih kuat dibanding DTD? ...
+
 5. Mengapa namespace penting? ...
-6. Apa kegunaan XPath? ...
+
+6. Apa kegunaan XPath?  
+Kegunaan XPath adaah sebagai alat navigasi untuk mencari dan memilih bagian tertentu dari sebuah dokumen XML (ataupun HTML)
