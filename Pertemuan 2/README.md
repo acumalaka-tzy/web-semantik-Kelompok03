@@ -1,7 +1,8 @@
 # Pertemuan 2 - Format Dokumen XML
 
 ## 1. Profil XML
-Jelaskan secara singkat struktur XML yang Anda buat.
+Jelaskan secara singkat struktur XML yang Anda buat.  
+struktur xml yang saya buat adalah isi tentang  biodata saya sebagai mahasiswa teknologi  informasi
 
 
 ## 2. Analisis Kesalahan XML
@@ -26,7 +27,8 @@ Jelaskan secara singkat struktur XML yang Anda buat.
 4. Apakah URI namespace harus dapat dibuka? ...
 
 ## 5. Pertanyaan Evaluasi
-1. Perbedaan XML dan HTML: ...
+1. Perbedaan XML dan HTML: perbedaan nya dalah di xml kegunaan nya untuk transfer data sedangkan di html  untuk penyajian data nya
+    atau lebih  tepatnya HTML dirancang untuk memfasilitasi transfer dokumen berbasis web atau bagaimana format tampilan dari data. Sedangkan XML lebih kepada struktur dan konteksnya  
 2. Apa yang dimaksud well-formed? ...
 3. Perbedaan well-formed dan valid: ...
 4. Mengapa XSD lebih kuat dibanding DTD? ...
