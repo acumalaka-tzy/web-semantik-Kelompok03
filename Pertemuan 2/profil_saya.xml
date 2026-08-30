@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Profil mahasiswa Web Semantik -->
+
+<profil nim="ISI_NIM_ANDA">
+    <nama>Aldiva RRoelya Padang</nama>
+    <angkatan>2025</angkatan>
+    <programStudi>Teknologi Informasi</programStudi>
+
+    <hobi>Mendengarkan musik</hobi>
+    <hobi>Bermain game</hobi>
+
+    <deskripsi>
+        saya adalah orang yang gampang ngantukan dan juga orang yang sering kali mengisi waktu luang untuk tidur
+    </deskripsi>
+</profil>
