@@ -38,5 +38,5 @@ Perbedaan nya adalah di XML kegunaan nya untuk transfer data sedangkan di HTML u
 
 5. Mengapa namespace penting? ...
 
-6. Apa kegunaan XPath? 
+6. Apa kegunaan XPath?  
 Kegunaan XPath adaah sebagai alat navigasi untuk mencari dan memilih bagian tertentu dari sebuah dokumen XML (ataupun HTML)
