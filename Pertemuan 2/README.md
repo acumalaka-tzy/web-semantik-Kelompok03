@@ -21,10 +21,15 @@ struktur xml yang saya buat adalah isi tentang  biodata saya sebagai mahasiswa t
 5. Atribut ISBN: atribut ISBN tidak boleh tidak ditulis karena terdapat use="required" yang dimana atribut tersebut wajib untuk ditulis
 
 ## 4. Analisis Namespace
-1. Mengapa kedua elemen title tidak sama? ...
-2. Fungsi prefix: ...
-3. Fungsi xmlns: ...
-4. Apakah URI namespace harus dapat dibuka? ...
+1. Mengapa kedua elemen title tidak sama?:
+   Karena walaupun sama-sama bernama title, keduanya berasal dari namespace yang berbeda. buku:title berasal dari namespace buku, sedangkan web:title berasal dari namespace web. Jadi XML menganggap keduanya sebagai dua elemen yang berbeda.
+2. Fungsi prefix:
+   Prefix buku: dan web: berfungsi sebagai penanda atau nama singkat untuk membedakan elemen. Jadi kita bisa tahu bahwa buku:title termasuk bagian dari namespace buku, sedangkan web:title termasuk bagian dari namespace web.
+3. Fungsi xmlns:
+   xmlns berfungsi untuk memberitahu XML bahwa prefix tertentu mengarah ke namespace tertentu. Contohnya xmlns:buku="https://example.org/buku" berarti prefix buku menggunakan namespace tersebut, begitu juga dengan prefix web.
+4. Apakah URI namespace harus dapat dibuka?:
+   Tidak harus. URI namespace hanya digunakan sebagai tanda pengenal supaya namespace bisa dibedakan satu sama lain. Jadi meskipun alamat tersebut tidak bisa dibuka di browser atau tidak memiliki halaman web, tetap bisa digunakan
+   sebagai namespace.
 
 ## 5. Pertanyaan Evaluasi
 1. Perbedaan XML dan HTML:  
