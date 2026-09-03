@@ -38,9 +38,11 @@ Perbedaan nya adalah di XML kegunaan nya untuk transfer data sedangkan di HTML u
 2. Apa yang dimaksud well-formed?
 well formed adalah ketika sintaks dari dokumen xml sudah benar sesuai aturan dasar xml. jika satu saja aturannya dilanggar, maka akan langusng error karena xml tidak memaafkan kesalahan sekecil apapun.
 
-3. Perbedaan well-formed dan valid: ...
+3. Perbedaan well-formed dan valid:
+Well-formed berarti XML sudah ditulis dengan benar sesuai aturan dasar XML, sedangkan valid berarti XML sudah well-formed dan juga sesuai dengan aturan yang sudah ditentukan oleh DTD atau XSD.
 
-4. Mengapa XSD lebih kuat dibanding DTD? ...
+4. Mengapa XSD lebih kuat dibanding DTD?
+XSD lebih kuat karena bisa membuat aturan yang lebih detail untuk data dalam XML. Misalnya, XSD bisa menentukan bahwa suatu data harus berupa angka, tanggal, atau memiliki batas nilai tertentu. Sedangkan DTD aturannya lebih sederhana dan terbatas.
 
 5. Mengapa namespace penting?
 namespace penting untuk mencegah bentrok makna antar tag saat data dari sumber/skema berbeda digabungkan dalam satu dokumen.
