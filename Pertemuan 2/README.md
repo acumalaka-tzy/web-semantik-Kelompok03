@@ -9,9 +9,16 @@ struktur xml yang saya buat adalah isi tentang  biodata saya sebagai mahasiswa t
 
 | No | Bagian yang Salah | Alasan | Perbaikan |
 |---|---|---|---|
-| 1 | ... | ... | ... |
-| 2 | ... | ... | ... |
-| 3 | ... | ... | ... |
+| 1 | <hobi> yang ditulis dua kali berturut | Tidak dikelompokkan dalam satu elemen induk | <hobiList>
+<hobi>...</hobi>
+<hobi>...</hobi>
+</hobiList> |
+| 2 | Elemen root <profil> | Tidak terdapat deklarasi namespace | Tambahkan deklarasi namespace di depan elemen <profil>, misalnya xmlns="..." |
+| 3 | Atribut nim, sedangkan nama, angkatan, dan programStudi ditulis sebagai elemen | Tidak konsisten dalam pemodelan data, harusnya data sejenis seperti identitaas mahasiswa direpresemtasikan dengan cara yang sama | Ubah nim menjadi elemen seperti ini,
+    <nim>251402001</nim>
+    <nama>Isi Nama Anda</nama>
+    <angkatan>2024</angkatan>
+    <programStudi>Teknologi Informasi</programStudi>|
 
 ## 3. Analisis XML Schema
 1. Root element: buku
