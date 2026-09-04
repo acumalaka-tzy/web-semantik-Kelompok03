@@ -15,10 +15,11 @@
 2. Fungsi `@context`, `@type`, dan `@id`: @context untuk menghubungkan stilah lokal ke kosakata atau standar global, jadinya arti data nya jelas
     sedangkan pada @type untuk menjelaskan atau menntekukan jenis entitas yang di jelaskan. pada soal adalah personh contohn nanusia atau seseorang. lalu @id untuk memberikann identitas unik untuk suatu entitas sehingga dapat di hubungkan dengan data lain yang ada di weeb semantik
 3. Node tanpa `@id`: jika node tanpa @Id akan menjadi node anonim ataun node blank
+   
 ## 2. Pemeriksaan schema.org
-1. Alasan memilih tipe paling spesifik: ...
-2. Nama properti dan bahasa nilai: ...
-3. Manfaat array pada `knowsAbout`: ...
+1. Alasan memilih tipe paling spesifik: Supaya data lebih jelas dan sesuai dengan jenis entitasnya. Contohnya, CollegeOrUniversity lebih tepat untuk universitas daripada hanya menggunakan Organization.
+2. Nama properti dan bahasa nilai: Karena nama properti seperti name dan knowsAbout sudah menjadi standar dari Schema.org dan tidak boleh diganti. Sedangkan nilainya adalah isi data, jadi boleh menggunakan bahasa Indonesia.
+3. Manfaat array pada `knowsAbout`: Array digunakan supaya satu orang bisa memiliki beberapa pengetahuan sekaligus. Contohnya: ["Java", "Database", "Jaringan"].
 
 ## 3. Perbaikan Lima Kesalahan
 | No. | Bagian Salah | Alasan | Perbaikan |
