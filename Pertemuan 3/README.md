@@ -1,8 +1,8 @@
 # Latihan Pertemuan 3 - JSON-LD dan Structured Data
 
 ## Identitas
-- Nama: ISI_NAMA
-- NIM: ISI_NIM
+- Nama: Aldiva Roelya Padang
+- NIM: 251402007
 
 ## Struktur Hasil
 - `profil_saya.jsonld`
@@ -11,10 +11,10 @@
 - folder `screenshots`
 
 ## 1. JSON Biasa dan JSON-LD
-1. Perbedaan fungsi kunci: ...
-2. Fungsi `@context`, `@type`, dan `@id`: ...
-3. Node tanpa `@id`: ...
-
+1. Perbedaan fungsi kunci: kalo pada JSON biasa hanyalah nama atribut yang maknanya ditentukan oleh aplikasi yang menggunakannya, sedangkan pada JSON-LD memiliki makna yang sudah didefinisikan dalam kosakata Schema.org pada @context.
+2. Fungsi `@context`, `@type`, dan `@id`: @context untuk menghubungkan stilah lokal ke kosakata atau standar global, jadinya arti data nya jelas
+    sedangkan pada @type untuk menjelaskan atau menntekukan jenis entitas yang di jelaskan. pada soal adalah personh contohn nanusia atau seseorang. lalu @id untuk memberikann identitas unik untuk suatu entitas sehingga dapat di hubungkan dengan data lain yang ada di weeb semantik
+3. Node tanpa `@id`: jika node tanpa @Id akan menjadi node anonim ataun node blank
 ## 2. Pemeriksaan schema.org
 1. Alasan memilih tipe paling spesifik: ...
 2. Nama properti dan bahasa nilai: ...
