@@ -19,7 +19,7 @@
 ## 2. Pemeriksaan schema.org
 1. Alasan memilih tipe paling spesifik: Supaya data lebih jelas dan sesuai dengan jenis entitasnya. Contohnya, CollegeOrUniversity lebih tepat untuk universitas daripada hanya menggunakan Organization.
 2. Nama properti dan bahasa nilai: Karena nama properti seperti name dan knowsAbout sudah menjadi standar dari Schema.org dan tidak boleh diganti. Sedangkan nilainya adalah isi data, jadi boleh menggunakan bahasa Indonesia.
-3. Manfaat array pada `knowsAbout`: Array digunakan supaya satu orang bisa memiliki beberapa pengetahuan sekaligus. Contohnya: ["Java", "Database", "Jaringan"].
+3. Manfaat array pada `knowsAbout`: Array digunakan supaya satu orang bisa memiliki lebih dari satu pengetahuan sekaligus. Contohnya: ["Java", "Database", "Jaringan"].
 
 ## 3. Perbaikan Lima Kesalahan
 | No. | Bagian Salah | Alasan | Perbaikan |
