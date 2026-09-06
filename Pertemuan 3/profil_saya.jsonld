@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402043",
+  "name": "Gabriel Saurman Parhusip",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Web Semantik",
+    "Laravel"
+  ]
+}
