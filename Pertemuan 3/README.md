@@ -24,11 +24,11 @@
 ## 3. Perbaikan Lima Kesalahan
 | No. | Bagian Salah | Alasan | Perbaikan |
 |---|---|---|---|
-| 1 | ... | ... | ... |
-| 2 | ... | ... | ... |
-| 3 | ... | ... | ... |
-| 4 | ... | ... | ... |
-| 5 | ... | ... | ... |
+| 1 | "@type": "person" | pada schema.org person ditulis dengan awal kapital. | "@type": "Person" |
+| 2 | 'name': "Rina Anggraini" | JSON hanya menggunakan tanda petik dua ("), jadi pada name tidak boleh memakai petik satu ('). | "name": "Rina Anggraini" |
+| 3 | "birthDate": "12 September 2004" | Format tanggal tidak menggunakan standar ISO 8601. | "birthDate": "2004-09-12" |
+| 4 | "nomorInduk": "221401001" | nomorInduk bukan properti yang sesuai pada Schema.org, Untuk menyimpan nomor identitas dapat menggunakan properti identifier. | "identifier": "221401001" |
+| 5 | "identifier": "221401001", } | pada JSON tidak boleh ada koma setelah properti terakhir sebelum tanda }, jadi koma setelah properti terakhir harus di hapus. | "identifier": "221401001" } |
 
 ## 4. Triple dari JSON-LD Playground
 Tuliskan satu baris N-Quads yang terbentuk:
