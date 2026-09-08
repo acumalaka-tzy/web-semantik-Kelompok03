@@ -38,9 +38,9 @@ Tuliskan satu baris N-Quads yang terbentuk:
 ```
 
 ## 5. Hasil Validasi
-- Schema Markup Validator: ...
-- Rich Results Test: ...
-- JSON-LD Playground: ...
+- Schema Markup Validator: Tidak ada kesalahan, tidak ada peringatan dan semuanya sudah benar sesuai dengan kosakata schema.org
+- Rich Results Test: 1 item valid terdeteksi yakni 'Seminar Web Semantik'. Ada 8 masalah nontkritis hanyasaja opsional
+- JSON-LD Playground: berhasil di expand menjadi 7 triple tanpa ada errror
 
 ## 6. Refleksi
 1. Mengapa `@context` disebut jembatan menuju makna?: Karena @context memberi tau mesin arti dari istilah yang digunakan dalam JSON-LD. Jadi mesin tidak melihat teks saja, tetapi juga memahami maksud dari data tersebut.
