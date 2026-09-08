@@ -34,7 +34,7 @@
 Tuliskan satu baris N-Quads yang terbentuk:
 
 ```text
-ISI_TRIPLE
+<https://usu.ac.id/mhs/251402043> <https://schema.org/name> "Gabriel Saurman Parhusip" .
 ```
 
 ## 5. Hasil Validasi
