@@ -1,11 +1,16 @@
 # Pertemuan 4 — Metadata dan Interoperabilitas
 
 ## Identitas sumber
-- Judul: [isi judul]
-- Pembuat: [isi pembuat]
-- URI sumber: [isi URI yang dipakai di Turtle dan JSON-LD]
-- Jenis sumber: [isi jenis]
+- Judul: Pengantar semantic web
+- Pembuat: Dr. Anak gung Istri ngurah eka karyawati,S.Si.,M.eng
+- URI sumber:https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e
+- Jenis sumber: Learning Resource
+- Tanggal: 2017-06-17
+- Deskripsi: Tentang pengatar web semantik untuk mahasiswa
+- Bahasa:id
+- Hak cipta:Hak Cipta penulis
 
+  
 ## Pemetaan Dublin Core Terms
 | Properti | Nilai | Alasan pemilihan |
 | --- | --- | --- |
@@ -22,7 +27,8 @@
 - Schema Markup Validator: [ringkasan hasil]
 
 ## Refleksi
-1. Mengapa URI yang sama penting untuk Turtle dan JSON-LD?
+1. Mengapa URI yang sama penting untuk Turtle dan JSON-LD?  
+ -> Pakai URI yang sama itu penting supaya format Turtle dan JSON-LD menunjuk ke benda atau halaman yang persis sama. Jadi, sistem nggak menganggap itu dua data yang berbeda, melainkan satu sumber data yang utuh.  
 2. Apa perbedaan peran DC Terms dan schema.org pada pekerjaan ini?
 3. Sebutkan satu risiko jika metadata HTML, Turtle, dan JSON-LD tidak konsisten.
 
