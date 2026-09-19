@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/>; .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#>; .
+
+<https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar>;
+    dcterms:title "ISI_JUDUL"@id ;
+    dcterms:creator "ISI_NAMA_PEMBUAT"@id ;
+    dcterms:description "ISI_DESKRIPSI"@id ;
+    dcterms:created "YYYY-MM-DD"^^xsd:date ;
+    dcterms:type "Text" ;
+    dcterms:language "id" ;
+    dcterms:rights "ISI_HAK_ATAU_LISENSI"
