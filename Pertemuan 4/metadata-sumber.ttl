@@ -1,11 +1,13 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8ef> ;
-    dcterms:title "Pengantar Semantic Web untuk Mahasiswa" ;
-    dcterms:creator "Dr. Anak Agung Istri Ngurah Eka Karyawati" ;
-    dcterms:description "Modul yang membahas pengantar dan konsep dasar Semantic Web" ;
-    dcterms:created "2017-06-01"^^xsd:date ;
-    dcterms:type "Text" ;
+<https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e>
+    dcterms:title "Pengantar Semantic Web" ;
+    dcterms:creator "Dr. Anak Agung Istri Ngurah Eka Karyawati, S.Si., M.Eng" ;
+    dcterms:description "Materi pengantar web semantik untuk mahasiswa" ;
+    dcterms:created "2017-06-17"^^xsd:date ;
+    dcterms:type "Learning Resource" ;
     dcterms:language "id" ;
-    dcterms:rights "All Rights Reserved"
+    dcterms:rights "Hak Cipta penulis" ;
+    dcterms:identifier <https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e> ;
+    dcterms:publisher "Scribd" .
