@@ -2,7 +2,7 @@
 
 ## Identitas sumber
 - Judul: Pengantar semantic web
-- Pembuat: Dr. Anak gung Istri ngurah eka karyawati,S.Si.,M.eng
+- Pembuat: Dr. Anak Agung Istri Ngurah Eka Karyawati, S.Si., M.Eng
 - URI sumber: https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e
 - Jenis sumber: Learning Resource
 - Tanggal: 2017-06-17
@@ -38,7 +38,7 @@
    - `inLanguage`
    - `dateCreated`
    - `license`
-   
+
    Penggunaan Schema.org membantu merepresentasikan metadata sumber belajar dengan vocabulary yang dapat dipahami oleh berbagai aplikasi dan mesin pencari.
 
 ## Refleksi
