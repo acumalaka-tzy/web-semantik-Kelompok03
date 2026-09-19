@@ -1,11 +1,11 @@
-@prefix dcterms: <http://purl.org/dc/terms/>; .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#>; .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar>;
-    dcterms:title "ISI_JUDUL"@id ;
-    dcterms:creator "ISI_NAMA_PEMBUAT"@id ;
-    dcterms:description "ISI_DESKRIPSI"@id ;
-    dcterms:created "YYYY-MM-DD"^^xsd:date ;
+<https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8ef> ;
+    dcterms:title "Pengantar Semantic Web untuk Mahasiswa" ;
+    dcterms:creator "Dr. Anak Agung Istri Ngurah Eka Karyawati" ;
+    dcterms:description "Modul yang membahas pengantar dan konsep dasar Semantic Web" ;
+    dcterms:created "2017-06-01"^^xsd:date ;
     dcterms:type "Text" ;
     dcterms:language "id" ;
-    dcterms:rights "ISI_HAK_ATAU_LISENSI"
+    dcterms:rights "All Rights Reserved"
