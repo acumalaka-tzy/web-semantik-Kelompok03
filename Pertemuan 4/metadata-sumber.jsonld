@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "title": "dcterms:title",
+    "creator": "dcterms:creator",
+    "description": "dcterms:description",
+    "created": {
+      "@id": "dcterms:created",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "type": "dcterms:type",
+    "language": "dcterms:language",
+    "rights": "dcterms:rights",
+    "identifier": "dcterms:identifier",
+    "publisher": "dcterms:publisher"
+  },
+  "@id": "https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e",
+  "title": "Pengantar Semantic Web",
+  "creator": "Dr. Anak Agung Istri Ngurah Eka Karyawati, S.Si., M.Eng",
+  "description": "Materi pengantar web semantik untuk mahasiswa",
+  "created": "2017-06-17",
+  "type": "Learning Resource",
+  "language": "id",
+  "rights": {
+    "@type": "CreativeWork",
+    "name": "Hak Cipta penulis"
+  },
+  "identifier": "https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e",
+  "publisher": "Scribd"
+}

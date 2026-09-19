@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e",
+  "name": "Pengantar Semantic Web",
+  "description": "Materi pengantar web semantik untuk mahasiswa",
+  "inLanguage": "id",
+  "dateCreated": "2017-06-17",
+  "license": {
+  "@type": "CreativeWork",
+  "name": "Hak Cipta penulis"
+  },
+  "url": "https://id.scribd.com/document/536906501/b84bf491ca8b773ed40382f91a3ee8e",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Anak Agung Istri Ngurah Eka Karyawati, S.Si., M.Eng"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Scribd"
+  }
+}
