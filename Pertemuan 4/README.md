@@ -37,4 +37,4 @@
    -> Data bisa salah dipahami oleh si mesin, misalnya judul di HTML berbeda dengan yang ada di JSON-LD, sehingga informasi menjadi tidak sesuai.
 
 ## Catatan akhir
-[Tulis catatan singkat tentang konsistensi metadata Anda.]
+Metadata pada HTML, Turtle, dan JSON-LD telah disesuaikan dengan pemetaan Dublin Core Terms dan dibuat konsisten. Judul, pembuat, deskripsi, tanggal, tipe, bahasa, hak cipta, identifier, dan penerbit menggunakan nilai yang sama atau memiliki makna yang setara pada ketiga representasi metadata. URI subjek juga digunakan secara konsisten sebagai identitas sumber.
