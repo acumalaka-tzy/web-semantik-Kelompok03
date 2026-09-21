@@ -1,18 +1,18 @@
 # Pertemuan 5 - Ontology dan Arsitektur Web Semantik
 
 ## Ontology mini kampus
-- IRI dasar: [isi IRI]
-- Domain: Kampus
+- IRI dasar: https://satu.usu.ac.id/mahasiswa
+- Domain: satu.usu.ac.id
 
 ## Komponen ontology
-| Komponen | Isi yang dibuat |
-| --- | --- |
-| Class | [isi] |
-| Subclass | [isi] |
-| Object property | [isi] |
-| Datatype property | [isi] |
-| Individual | [isi] |
-| Axiom/disjointness | [isi] |
+| Komponen | Makna | Contoh Domain USU |
+|---|---|---|
+| Class | Konsep atau kelompok abstrak | Mahasiswa,mata kuliah,fakultas|
+| Subclass | Class yang lebih khusus | MahasiswaTI subclass dari mahasiswa,Mahasiswailkom subclass dari mahasiswa |
+| Individual | Instance konkret | Aldiva Roelya Padang bertipe mahasiswa, FASILKOM-TI bertipe fakultas |
+| Property | Hubungan atau nilai | mengambil Mata kuliah, memiliki nim |
+| Axiom | Aturan atau pernyataan | Mahasiswa belongs to some fakultas |
+
 
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
@@ -24,5 +24,6 @@ Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
-2. Mengapa domain pada OWL bukan constraint database?
-3. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
+   aksonomi hanya mengatur pengelompokan atau hierarki, sedangkan ontology menjelaskan pengelompokan sekaligus hubungan dan makna dari setiap data yang ada.
+3. Mengapa domain pada OWL bukan constraint database?
+4. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
