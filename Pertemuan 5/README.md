@@ -13,6 +13,12 @@
 | Property | Hubungan atau nilai | mengambil Mata kuliah, memiliki nim |
 | Axiom | Aturan atau pernyataan | Mahasiswa belongs to some fakultas |
 
+##pizza.owl
+Class: Pizza
+Subclass: CheesyPizza
+Individual: pizza:italy
+Object property: pizza:hasTopping
+Datatype property: Spiciness (hot, medium, mild)
 
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
