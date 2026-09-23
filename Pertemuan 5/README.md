@@ -13,7 +13,7 @@
 | Property | Hubungan atau nilai | mengambil Mata kuliah, memiliki nim |
 | Axiom | Aturan atau pernyataan | Mahasiswa belongs to some fakultas |
 
-##pizza.owl
+## pizza.owl
 Class: Pizza
 Subclass: CheesyPizza
 Individual: pizza:italy
@@ -31,5 +31,5 @@ Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
    aksonomi hanya mengatur pengelompokan atau hierarki, sedangkan ontology menjelaskan pengelompokan sekaligus hubungan dan makna dari setiap data yang ada.
-3. Mengapa domain pada OWL bukan constraint database?
-4. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
+2. Mengapa domain pada OWL bukan constraint database?
+3. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
