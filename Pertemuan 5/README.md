@@ -14,10 +14,10 @@
 | Axiom | Aturan atau pernyataan | Mahasiswa belongs to some fakultas |
 
 ## pizza.owl
-Class: Pizza
-Subclass: CheesyPizza
-Individual: pizza:italy
-Object property: pizza:hasTopping
+Class: Pizza |
+Subclass: CheesyPizza |
+Individual: pizza:italy |
+Object property: pizza:hasTopping |
 Datatype property: Spiciness (hot, medium, mild)
 
 ## Layer Cake
