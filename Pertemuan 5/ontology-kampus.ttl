@@ -1,64 +1,106 @@
-@prefix kampus: <https://satu.usu.ac.id/mahasiswa#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <https://contoh.github.io/web-semantik/251402016/kampus#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://contoh.github.io/web-semantik/251402016/kampus#> .
 
-kampus:OntologyKampus a owl:Ontology ;
-    rdfs:label "Ontology Mini Kampus"@id .
+<https://contoh.github.io/web-semantik/251402016/kampus> rdf:type owl:Ontology .
 
-### Classes
+#################################################################
+#    Object Properties
+#################################################################
 
-kampus:Mahasiswa a owl:Class ;
-    rdfs:label "Mahasiswa"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#belongsToDepartment
+:belongsToDepartment rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Person ;
+                     rdfs:range :Department .
 
-kampus:MataKuliah a owl:Class ;
-    rdfs:label "Mata Kuliah"@id .
 
-kampus:Fakultas a owl:Class ;
-    rdfs:label "Fakultas"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#takesCourse
+:takesCourse rdf:type owl:ObjectProperty ;
+             rdfs:domain :Student ;
+             rdfs:range :Course .
 
-### Subclasses
 
-kampus:MahasiswaTI a owl:Class ;
-    rdfs:subClassOf kampus:Mahasiswa ;
-    rdfs:label "Mahasiswa TI"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#teachesCourse
+:teachesCourse rdf:type owl:ObjectProperty ;
+               rdfs:domain :Lecturer ;
+               rdfs:range :Course .
 
-kampus:Mahasiswailkom a owl:Class ;
-    rdfs:subClassOf kampus:Mahasiswa ;
-    rdfs:label "Mahasiswa Ilmu Komputer"@id .
 
-### Object Properties
+#################################################################
+#    Data properties
+#################################################################
 
-kampus:mengambil a owl:ObjectProperty ;
-    rdfs:domain kampus:Mahasiswa ;
-    rdfs:range kampus:MataKuliah ;
-    rdfs:label "mengambil Mata Kuliah"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#hasNIM
+:hasNIM rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Student ;
+        rdfs:range xsd:string .
 
-kampus:berasalDariFakultas a owl:ObjectProperty ;
-    rdfs:domain kampus:Mahasiswa ;
-    rdfs:range kampus:Fakultas ;
-    rdfs:label "berasal dari Fakultas"@id .
 
-### Datatype Properties
+#################################################################
+#    Classes
+#################################################################
 
-kampus:memilikiNIM a owl:DatatypeProperty ;
-    rdfs:domain kampus:Mahasiswa ;
-    rdfs:range xsd:string ;
-    rdfs:label "memiliki NIM"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#Course
+:Course rdf:type owl:Class .
 
-### Individuals
 
-kampus:AldivaRoelyaPadang a kampus:Mahasiswa ;
-    rdfs:label "Aldiva Roelya Padang"@id .
+###  https://contoh.github.io/web-semantik/251402016/kampus#Department
+:Department rdf:type owl:Class .
 
-kampus:FASILKOMTI a kampus:Fakultas ;
-    rdfs:label "FASILKOM-TI"@id .
 
-### Axiom
+###  https://contoh.github.io/web-semantik/251402016/kampus#Lecturer
+:Lecturer rdf:type owl:Class ;
+          rdfs:subClassOf :Person ;
+          owl:disjointWith :Student .
 
-kampus:Mahasiswa rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty kampus:berasalDariFakultas ;
-    owl:someValuesFrom kampus:Fakultas
-] .
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#Person
+:Person rdf:type owl:Class .
+
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#Gabriel
+:Gabriel rdf:type owl:NamedIndividual ,
+                  :Student ;
+         :belongsToDepartment :TeknologiInformasi ;
+         :takesCourse :WebSemantik .
+
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#IsaDadi
+:IsaDadi rdf:type owl:NamedIndividual ,
+                  :Lecturer ;
+         :belongsToDepartment :TeknologiInformasi ;
+         :teachesCourse :WebSemantik .
+
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#TeknologiInformasi
+:TeknologiInformasi rdf:type owl:NamedIndividual ,
+                             :Department .
+
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#WebSemantik
+:WebSemantik rdf:type owl:NamedIndividual ,
+                      :Course .
+
+
+###  https://contoh.github.io/web-semantik/251402016/kampus#Yazri
+:Yazri rdf:type owl:NamedIndividual ,
+                :Student ;
+       :belongsToDepartment :TeknologiInformasi ;
+       :takesCourse :WebSemantik ;
+       :hasNIM "251402016" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
