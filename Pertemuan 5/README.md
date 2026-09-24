@@ -21,7 +21,7 @@ Object property: pizza:hasTopping |
 Datatype property: Spiciness (hot, medium, mild)
 
 ## Layer Cake
-Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
+Jelaskan posisi ontology dalam Semantic Web Layer Cake: Ontology (OWL) posisinya tepat di atas RDF/RDFS dalam Layer Cake. Dia numpang di fondasi RDF (triple subjek-predikat-objek) dan RDFS (kosakata dasar kayak subClassOf, domain, range), terus nambahin logika yang lebih dalam, misalnya equivalentClass, disjointWith, cardinality, yang RDFS doang gak sanggup. Makanya ontology jadi dasar buat lapis-lapis di atasnya kayak SPARQL, Rules, Proof, sampai Trust. Sebelum data bisa di-query atau ditarik kesimpulan lewat reasoning, data itu harus udah dimodelin pakai ontology dulu. Jadi ontology bukan gantiin RDF, tapi bikin RDF "lebih paham konteks", dari cuma nyatet fakta jadi bisa dinalar sama mesin.
 
 ## Perbandingan serialisasi
 - Turtle: [dua pengamatan sintaks]
