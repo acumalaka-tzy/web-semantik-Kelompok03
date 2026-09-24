@@ -23,13 +23,23 @@ Datatype property: Spiciness (hot, medium, mild)
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: Ontology (OWL) posisinya tepat di atas RDF/RDFS dalam Layer Cake. Dia numpang di fondasi RDF (triple subjek-predikat-objek) dan RDFS (kosakata dasar kayak subClassOf, domain, range), terus nambahin logika yang lebih dalam, misalnya equivalentClass, disjointWith, cardinality, yang RDFS doang gak sanggup. Makanya ontology jadi dasar buat lapis-lapis di atasnya kayak SPARQL, Rules, Proof, sampai Trust. Sebelum data bisa di-query atau ditarik kesimpulan lewat reasoning, data itu harus udah dimodelin pakai ontology dulu. Jadi ontology bukan gantiin RDF, tapi bikin RDF "lebih paham konteks", dari cuma nyatet fakta jadi bisa dinalar sama mesin.
 
-## Perbandingan serialisasi
+## Langkah 5: Perbandingan Serialisasi
 
-- Turtle: Menggunakan deklarasi `@prefix` untuk mempersingkat penulisan URI dan menggunakan tanda titik (`.`) serta titik koma (`;`) untuk menuliskan triple secara ringkas.
+### Turtle
 
-- RDF/XML: Menggunakan struktur elemen XML dan deklarasi namespace seperti `xmlns:kampus`, dengan URI dituliskan melalui atribut `rdf:about` atau `rdf:resource`.
+- Turtle memiliki sintaks yang lebih ringkas dan mudah dibaca karena menggunakan `@prefix` untuk mempersingkat URI.
+- Hubungan antarentitas ditulis menggunakan simbol seperti `;` dan `,`, sehingga struktur ontology terlihat lebih sederhana.
 
-- Kesamaan makna: Kedua format merepresentasikan ontology mini Kampus yang sama, dengan class Mahasiswa, MataKuliah, dan Fakultas, subclass MahasiswaTI dan Mahasiswailkom, serta property mengambil, memilikiNIM, dan berasalDariFakultas. Individual Aldiva Roelya Padang dan FASILKOM-TI juga direpresentasikan dalam kedua format. Perbedaan keduanya hanya terletak pada bentuk sintaks serialisasi, bukan pada makna dan hubungan antarentitas.
+### RDF/XML
+
+- RDF/XML menggunakan struktur XML dengan tag seperti `rdf:Description`, `owl:Class`, `rdf:about`, dan `rdf:resource`.
+- Penulisannya lebih panjang dan detail karena setiap class, property, dan hubungan ditulis menggunakan elemen XML.
+
+### Kesamaan Makna
+
+RDF/XML dan Turtle merepresentasikan ontology Kampus yang sama. Keduanya memiliki class, object property, datatype property, individual, serta hubungan antarentitas yang sama.
+
+Perbedaannya hanya terletak pada sintaks penulisan. Turtle lebih ringkas dan mudah dibaca, sedangkan RDF/XML lebih terstruktur dalam bentuk XML.
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
