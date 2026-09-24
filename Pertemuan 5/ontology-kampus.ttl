@@ -1,0 +1,64 @@
+@prefix kampus: <https://satu.usu.ac.id/mahasiswa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kampus:OntologyKampus a owl:Ontology ;
+    rdfs:label "Ontology Mini Kampus"@id .
+
+### Classes
+
+kampus:Mahasiswa a owl:Class ;
+    rdfs:label "Mahasiswa"@id .
+
+kampus:MataKuliah a owl:Class ;
+    rdfs:label "Mata Kuliah"@id .
+
+kampus:Fakultas a owl:Class ;
+    rdfs:label "Fakultas"@id .
+
+### Subclasses
+
+kampus:MahasiswaTI a owl:Class ;
+    rdfs:subClassOf kampus:Mahasiswa ;
+    rdfs:label "Mahasiswa TI"@id .
+
+kampus:Mahasiswailkom a owl:Class ;
+    rdfs:subClassOf kampus:Mahasiswa ;
+    rdfs:label "Mahasiswa Ilmu Komputer"@id .
+
+### Object Properties
+
+kampus:mengambil a owl:ObjectProperty ;
+    rdfs:domain kampus:Mahasiswa ;
+    rdfs:range kampus:MataKuliah ;
+    rdfs:label "mengambil Mata Kuliah"@id .
+
+kampus:berasalDariFakultas a owl:ObjectProperty ;
+    rdfs:domain kampus:Mahasiswa ;
+    rdfs:range kampus:Fakultas ;
+    rdfs:label "berasal dari Fakultas"@id .
+
+### Datatype Properties
+
+kampus:memilikiNIM a owl:DatatypeProperty ;
+    rdfs:domain kampus:Mahasiswa ;
+    rdfs:range xsd:string ;
+    rdfs:label "memiliki NIM"@id .
+
+### Individuals
+
+kampus:AldivaRoelyaPadang a kampus:Mahasiswa ;
+    rdfs:label "Aldiva Roelya Padang"@id .
+
+kampus:FASILKOMTI a kampus:Fakultas ;
+    rdfs:label "FASILKOM-TI"@id .
+
+### Axiom
+
+kampus:Mahasiswa rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty kampus:berasalDariFakultas ;
+    owl:someValuesFrom kampus:Fakultas
+] .

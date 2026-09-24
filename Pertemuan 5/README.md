@@ -24,9 +24,12 @@ Datatype property: Spiciness (hot, medium, mild)
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: Ontology (OWL) posisinya tepat di atas RDF/RDFS dalam Layer Cake. Dia numpang di fondasi RDF (triple subjek-predikat-objek) dan RDFS (kosakata dasar kayak subClassOf, domain, range), terus nambahin logika yang lebih dalam, misalnya equivalentClass, disjointWith, cardinality, yang RDFS doang gak sanggup. Makanya ontology jadi dasar buat lapis-lapis di atasnya kayak SPARQL, Rules, Proof, sampai Trust. Sebelum data bisa di-query atau ditarik kesimpulan lewat reasoning, data itu harus udah dimodelin pakai ontology dulu. Jadi ontology bukan gantiin RDF, tapi bikin RDF "lebih paham konteks", dari cuma nyatet fakta jadi bisa dinalar sama mesin.
 
 ## Perbandingan serialisasi
-- Turtle: [dua pengamatan sintaks]
-- RDF/XML: [dua pengamatan sintaks]
-- Kesamaan makna: [isi]
+
+- Turtle: Menggunakan deklarasi `@prefix` untuk mempersingkat penulisan URI dan menggunakan tanda titik (`.`) serta titik koma (`;`) untuk menuliskan triple secara ringkas.
+
+- RDF/XML: Menggunakan struktur elemen XML dan deklarasi namespace seperti `xmlns:kampus`, dengan URI dituliskan melalui atribut `rdf:about` atau `rdf:resource`.
+
+- Kesamaan makna: Kedua format merepresentasikan ontology mini Kampus yang sama, dengan class Mahasiswa, MataKuliah, dan Fakultas, subclass MahasiswaTI dan Mahasiswailkom, serta property mengambil, memilikiNIM, dan berasalDariFakultas. Individual Aldiva Roelya Padang dan FASILKOM-TI juga direpresentasikan dalam kedua format. Perbedaan keduanya hanya terletak pada bentuk sintaks serialisasi, bukan pada makna dan hubungan antarentitas.
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
