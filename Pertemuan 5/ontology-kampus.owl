@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://contoh.github.io/web-semantik/251402016/kampus"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://contoh.github.io/web-semantik/251402016/kampus">
+    <Prefix name="" IRI="https://contoh.github.io/web-semantik/251402016/kampus#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lecturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#takesCourse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#teachesCourse"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNIM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gabriel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IsaDadi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TeknologiInformasi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WebSemantik"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yazri"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Lecturer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Student"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Lecturer"/>
+        <Class IRI="#Student"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Gabriel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lecturer"/>
+        <NamedIndividual IRI="#IsaDadi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Department"/>
+        <NamedIndividual IRI="#TeknologiInformasi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Course"/>
+        <NamedIndividual IRI="#WebSemantik"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Yazri"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+        <NamedIndividual IRI="#Gabriel"/>
+        <NamedIndividual IRI="#TeknologiInformasi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#takesCourse"/>
+        <NamedIndividual IRI="#Gabriel"/>
+        <NamedIndividual IRI="#WebSemantik"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+        <NamedIndividual IRI="#IsaDadi"/>
+        <NamedIndividual IRI="#TeknologiInformasi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#teachesCourse"/>
+        <NamedIndividual IRI="#IsaDadi"/>
+        <NamedIndividual IRI="#WebSemantik"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+        <NamedIndividual IRI="#Yazri"/>
+        <NamedIndividual IRI="#TeknologiInformasi"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#takesCourse"/>
+        <NamedIndividual IRI="#Yazri"/>
+        <NamedIndividual IRI="#WebSemantik"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasNIM"/>
+        <NamedIndividual IRI="#Yazri"/>
+        <Literal>251402016</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#takesCourse"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#teachesCourse"/>
+        <Class IRI="#Lecturer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsToDepartment"/>
+        <Class IRI="#Department"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#takesCourse"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#teachesCourse"/>
+        <Class IRI="#Course"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNIM"/>
+        <Class IRI="#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNIM"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
