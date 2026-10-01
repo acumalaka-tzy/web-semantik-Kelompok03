@@ -14,9 +14,9 @@
 
 
 ## Ringkasan graf
-- Jumlah triple: [isi]
-- Namespace yang digunakan: [isi]
-- Entitas: [isi]
+- Jumlah triple: 34 triple
+- Namespace yang digunakan: ex, foaf, rdf dan xsd
+- Entitas: 3 dosen, 2 mahasiswa, 3 mata kuliah
 
 ## Contoh triple
 1. [subject] - [predicate] - [object]
