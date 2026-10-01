@@ -23,9 +23,9 @@
 1 Fakultas : Fakultas Ilmu Komputer dan Teknologi Informasi
 
 ## Contoh triple
-1. [subject] - [predicate] - [object]
-2. [subject] - [predicate] - [object]
-3. [subject] - [predicate] - [object]
+1. EX.ida - RDF.type - EX.Lecturer
+2. EX.ida - FOAF.name - "Muhammad Isa Dadi Hasibuan"
+3. EX.ida - EX.mengajar - EX.web_semantik
 
 ## Perbandingan serialisasi
 - Turtle: [pengamatan]
