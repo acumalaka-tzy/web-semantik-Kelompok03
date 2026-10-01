@@ -11,6 +11,7 @@
 
 
 ## IRI dasar graf
+https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#
 
 
 ## Ringkasan graf
