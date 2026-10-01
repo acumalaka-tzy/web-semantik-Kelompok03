@@ -46,3 +46,4 @@ Contoh:
 http://example.org/webSemantik → ex:webSemantik
 Prefix hanya sebagai singkatan, jadi IRI yang dituju tetap sama.
 5. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
+Kesalahan yang dihindari adalah menggunakan string sebagai object pada relasi mengajar.
