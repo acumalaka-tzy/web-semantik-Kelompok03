@@ -40,10 +40,10 @@ ex:ida ex:teaches ex:webSemantik
 Literal digunakan untuk nilai langsung seperti teks, angka, atau tanggal.
 Contoh:
 ex:webSemantik ex:courseName "Web Semantik"
-3. Mengapa prefix membantu keterbacaan tanpa mengubah IRI?
+2. Mengapa prefix membantu keterbacaan tanpa mengubah IRI?
    Prefix membuat IRI yang panjang menjadi lebih singkat dan mudah dibaca.
 Contoh:
 http://example.org/webSemantik → ex:webSemantik
 Prefix hanya sebagai singkatan, jadi IRI yang dituju tetap sama.
-5. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
+3. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
 Kesalahan yang dihindari adalah menggunakan string sebagai object pada relasi mengajar.
