@@ -29,9 +29,9 @@ https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#
 3. EX.ida - EX.mengajar - EX.web_semantik
 
 ## Perbandingan serialisasi
-- Turtle: [pengamatan]
-- JSON-LD: [pengamatan]
-- Pernyataan yang sama: [isi]
+- Turtle: Penulisannya lebih singkat dan mudah dibaca karena menggunakan prefix seperti ex: dan foaf:. Hubungan antar-entitas juga terlihat lebih jelas.
+- JSON-LD: Penulisannya lebih panjang karena menggunakan struktur JSON dan menampilkan IRI secara lengkap. Namun, format ini lebih mudah digunakan dalam aplikasi yang menggunakan JSON.
+- Pernyataan yang sama: Kedua format menyimpan informasi RDF yang sama. Contohnya, pada Turtle: ex:ida ex:mengajar ex:web_semantik. Pada JSON-LD, pernyataan tersebut ditulis sebagai hubungan mengajar dari ida menuju web_semantik.
 
 ## Refleksi
 1. Kapan object harus berupa IRI dan kapan berupa literal?
