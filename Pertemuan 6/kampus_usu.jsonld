@@ -1,5 +1,57 @@
 [
   {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Ivan Jaya"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web"
+      }
+    ]
+  },
+  {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Yazri Khoiri"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
+      },
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#nim": [
+      {
+        "@value": "251402016"
+      }
+    ]
+  },
+  {
     "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik",
     "@type": [
       "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Course"
@@ -36,54 +88,24 @@
     ]
   },
   {
-    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri",
-    "@type": [
-      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Yazri Khoiri"
-      }
-    ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer"
-      }
-    ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil": [
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
-      },
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web"
-      }
-    ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#nim": [
-      {
-        "@value": "251402016"
-      }
-    ]
-  },
-  {
-    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya",
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi",
     "@type": [
       "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Ivan Jaya"
+        "@value": "Dedy Arisandi"
       }
     ],
     "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
       {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer"
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
       }
     ],
     "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar": [
       {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web"
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data"
       }
     ]
   },
@@ -106,31 +128,6 @@
     ]
   },
   {
-    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan",
-    "@type": [
-      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Muhammad Izyan"
-      }
-    ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer"
-      }
-    ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil": [
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
-      },
-      {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data"
-      }
-    ]
-  },
-  {
     "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida",
     "@type": [
       "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer"
@@ -143,7 +140,7 @@
     ],
     "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
       {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer"
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
       }
     ],
     "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar": [
@@ -153,29 +150,32 @@
     ]
   },
   {
-    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi",
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan",
     "@type": [
-      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer"
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student"
     ],
     "http://xmlns.com/foaf/0.1/name": [
       {
         "@language": "id",
-        "@value": "Dedy Arisandi"
+        "@value": "Muhammad Izyan"
       }
     ],
     "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
       {
-        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer"
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
       }
     ],
-    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar": [
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
+      },
       {
         "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data"
       }
     ]
   },
   {
-    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ilmu_komputer",
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi",
     "@type": [
       "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Faculty"
     ],

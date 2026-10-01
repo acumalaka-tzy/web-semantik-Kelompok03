@@ -4,28 +4,28 @@
 
 ex:dedy_arisandi a ex:Lecturer ;
     foaf:name "Dedy Arisandi"@id ;
-    ex:bernaung_di ex:ilmu_komputer ;
+    ex:bernaung_di ex:teknologi_informasi ;
     ex:mengajar ex:manajemen_basis_data .
 
 ex:ida a ex:Lecturer ;
     foaf:name "Muhammad Isa Dadi Hasibuan"@id ;
-    ex:bernaung_di ex:ilmu_komputer ;
+    ex:bernaung_di ex:teknologi_informasi ;
     ex:mengajar ex:web_semantik .
 
 ex:ivan_jaya a ex:Lecturer ;
     foaf:name "Ivan Jaya"@id ;
-    ex:bernaung_di ex:ilmu_komputer ;
+    ex:bernaung_di ex:teknologi_informasi ;
     ex:mengajar ex:pemrograman_web .
 
 ex:izyan a ex:Student ;
     foaf:name "Muhammad Izyan"@id ;
-    ex:bernaung_di ex:ilmu_komputer ;
+    ex:bernaung_di ex:teknologi_informasi ;
     ex:mengambil ex:manajemen_basis_data,
         ex:web_semantik .
 
 ex:yazri a ex:Student ;
     foaf:name "Yazri Khoiri"@id ;
-    ex:bernaung_di ex:ilmu_komputer ;
+    ex:bernaung_di ex:teknologi_informasi ;
     ex:mengambil ex:pemrograman_web,
         ex:web_semantik ;
     ex:nim "251402016" .
@@ -42,6 +42,6 @@ ex:web_semantik a ex:Course ;
     foaf:name "Web Semantik"@id ;
     ex:jumlahKredit 3 .
 
-ex:ilmu_komputer a ex:Faculty ;
+ex:teknologi_informasi a ex:Faculty ;
     foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id .
 

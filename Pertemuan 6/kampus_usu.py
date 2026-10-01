@@ -1,5 +1,6 @@
 from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, FOAF, XSD
+from rdflib.namespace import RDF
 
 g = Graph()
 
@@ -46,17 +47,21 @@ g.add((EX.izyan, EX.mengambil, EX.manajemen_basis_data))
 g.add((EX.yazri, EX.mengambil, EX.web_semantik))
 g.add((EX.yazri, EX.mengambil, EX.pemrograman_web))
 
-g.add((EX.ilmu_komputer, RDF.type, EX.Faculty))
-g.add((EX.ilmu_komputer, FOAF.name, Literal("Fakultas Ilmu Komputer dan Teknologi Informasi", lang="id")))
+g.add((EX.teknologi_informasi, RDF.type, EX.Faculty))
+g.add((EX.teknologi_informasi, FOAF.name, Literal("Fakultas Ilmu Komputer dan Teknologi Informasi", lang="id")))
 
-g.add((EX.ida, EX.bernaung_di, EX.ilmu_komputer))
-g.add((EX.dedy_arisandi, EX.bernaung_di, EX.ilmu_komputer))
-g.add((EX.ivan_jaya, EX.bernaung_di, EX.ilmu_komputer))
+g.add((EX.ida, EX.bernaung_di, EX.teknologi_informasi))
+g.add((EX.dedy_arisandi, EX.bernaung_di, EX.teknologi_informasi))
+g.add((EX.ivan_jaya, EX.bernaung_di, EX.teknologi_informasi))
 
-g.add((EX.izyan, EX.bernaung_di, EX.ilmu_komputer))
-g.add((EX.yazri, EX.bernaung_di, EX.ilmu_komputer))
+g.add((EX.izyan, EX.bernaung_di, EX.teknologi_informasi))
+g.add((EX.yazri, EX.bernaung_di, EX.teknologi_informasi))
 
 print(g.serialize(format="turtle"))
 
 g.serialize("kampus_usu.ttl", format="turtle")
 g.serialize("kampus_usu.jsonld", format="json-ld", indent=2)
+
+print("Daftar dosen:")
+for subject, predicate, obj in g.triples((None, RDF.type, EX.Lecturer)):
+    print(subject)
