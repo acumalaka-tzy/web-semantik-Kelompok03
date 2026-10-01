@@ -16,7 +16,11 @@
 ## Ringkasan graf
 - Jumlah triple: 34 triple
 - Namespace yang digunakan: ex, foaf, rdf dan xsd
-- Entitas: 3 dosen, 2 mahasiswa, 3 mata kuliah
+- Entitas:
+3 Dosen : Muhammad Isa Dadi Hasibuan, Dedy Arisandi, Ivan Jaya
+3 Mata Kuliah : Web Semantik, Manajemen Basis Data, Pemrograman Web
+2 Mahasiswa : Muhammad Izyan, Yazri Khoiri
+1 Fakultas : Fakultas Ilmu Komputer dan Teknologi Informasi
 
 ## Contoh triple
 1. [subject] - [predicate] - [object]
