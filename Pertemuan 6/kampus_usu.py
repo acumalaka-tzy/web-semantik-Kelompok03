@@ -2,7 +2,7 @@ from rdflib import Graph, Namespace, Literal
 from rdflib.namespace import RDF, FOAF, XSD
 
 g = Graph()
-EX = Namespace("https://zann-37.github.io/web-semantik/251402110/kampus#")
+EX = Namespace("https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#")
 
 g.bind("ex", EX)
 g.bind("foaf", FOAF)
