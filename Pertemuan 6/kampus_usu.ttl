@@ -1,0 +1,18 @@
+@prefix ex: <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:ida a ex:Lecturer ;
+    foaf:name "Muhammad Isa Dadi Hasibuan"@id ;
+    ex:bernaung_di ex:teknologi_informasi ;
+    ex:mengajar ex:web_semantik .
+
+ex:izyan a ex:Student ;
+    foaf:name "Muhammad Izyan"@id ;
+    ex:mengambil ex:web_semantik .
+
+ex:teknologi_informasi a ex:Faculty ;
+    foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id .
+
+ex:web_semantik a ex:Course ;
+    foaf:name "Web Semantik"@id .
+
