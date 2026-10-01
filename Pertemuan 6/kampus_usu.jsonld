@@ -1,0 +1,65 @@
+[
+  {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Muhammad Izyan"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Course"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Web Semantik"
+      }
+    ]
+  },
+  {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Faculty"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Fakultas Ilmu Komputer dan Teknologi Informasi"
+      }
+    ]
+  },
+  {
+    "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida",
+    "@type": [
+      "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Muhammad Isa Dadi Hasibuan"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi"
+      }
+    ],
+    "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar": [
+      {
+        "@id": "https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik"
+      }
+    ]
+  }
+]
