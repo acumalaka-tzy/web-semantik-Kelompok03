@@ -9,10 +9,22 @@
 | Ida Adi mengajar Web Semantik. | ex:ida | ex:teaches | ex:webSemantik |
 | Mata kuliah itu memiliki nama "Web Semantik". | ex:webSemantik | ex:courseName | "Web Semantik" |
 
+1. Identifikasi jenis node untuk ex:ida, "Ida Adi"@id, dan [ ex:kota "Medan" ].
+:  ex:ida adalah IRI (ditulis sebagai prefixed name), yaitu sumber daya dengan identitas global.
+   "Ida Adi"@id adalah literal berupa string dengan language tag id (bahasa Indonesia).
+   [ ex:kota "Medan" ] adalah blank node, yaitu node anonim tanpa IRI.
 
-## IRI dasar graf
+2. Mengapa literal tidak boleh menjadi subject RDF?
+:  Subject harus berupa sumber daya yaitu IRI atau blank node yang bisa diidentifikasi dan dideskripsikan. Literal hanyalah nilai data seperti teks, angka, atau      tanggal, bukan entitas yang bisa diberi properti, sehingga literal hanya boleh menjadi object.
+
+3. IRI dasar graf
 https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#
 
+4. Tuliskan kepanjangan namespace rdf, rdfs, xsd, dan foaf.
+:  rdf  : Resource Description Framework (http://www.w3.org/1999/02/22-rdf-syntax-ns#)
+   rdfs : RDF Schema (http://www.w3.org/2000/01/rdf-schema#)
+   xsd  : XML Schema Definition (http://www.w3.org/2001/XMLSchema#)
+   foaf : Friend of a Friend (http://xmlns.com/foaf/0.1/)
 
 ## Ringkasan graf
 - Jumlah triple: 34 triple
