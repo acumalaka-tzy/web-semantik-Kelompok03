@@ -27,6 +27,6 @@
 - Perbedaan reifikasi klasik dan RDF-star: [isi]
 
 ## Refleksi
-1. Mengapa named graph berguna saat menggabungkan data dari sumber berbeda?
-2. Mengapa provenance penting untuk sebuah triple?
-3. Format apa yang Anda pilih untuk git diff, dan mengapa?
+1. Mengapa named graph berguna saat menggabungkan data dari sumber berbeda? -> Named graph berguna saat menggabungkan data dari sumber berbeda karena kita bisa membedakan data berdasarkan sumbernya. Jadi, kita tau data tertentu berasal dari sumber mana dan tidak bercampur begitu saja.
+2. Mengapa provenance penting untuk sebuah triple? -> Provenance penting untuk sebuah triple karena kita bisa mengetahui asal-usul data tersebut, misalnya siapa yang membuat atau dari mana informasinya didapat. Dengan begitu, data lebih mudah dicek dan dipercaya.
+3. Format apa yang Anda pilih untuk git diff, dan mengapa? -> Untuk git diff, kami memilih format Turtle (TTL) karena penulisannya lebih sederhana dan mudah dibaca. Perubahan data juga lebih gampang dilihat dibandingkan RDF/XML yang biasanya lebih panjang dan rumit.
