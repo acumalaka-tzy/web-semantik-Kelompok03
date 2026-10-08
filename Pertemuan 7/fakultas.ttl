@@ -1,0 +1,13 @@
+@prefix ex: <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:teknologi_informasi
+    ex:memilikiDosen ex:ida, ex:dedy_arisandi, ex:ivan_jaya ;
+    ex:memilikiMahasiswa ex:izyan, ex:yazri ;
+    ex:memilikiMataKuliah ex:web_semantik, ex:manajemen_basis_data, ex:pemrograman_web ;
+    ex:memilikiProgram ex:teknologi_informasi_program ;
+    ex:sumberData "Data akademik kampus" .
+
+ex:teknologi_informasi_program
+    a ex:ProgramStudi ;
+    foaf:name "Teknologi Informasi"@id .
