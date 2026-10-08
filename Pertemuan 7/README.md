@@ -16,15 +16,15 @@
 - Named graph: [nama graf 1] dan [nama graf 2]
 
 ## Reifikasi dan provenance
-- Triple yang dianotasi: [isi]
-- Creator: [isi]
-- Date: [isi]
-- Source: [isi]
+- Triple yang dianotasi: `ex:ida ex:mengajar ex:web_semantik`
+- Creator: `ex:ida`
+- Date: 2026-10-01
+- Source: Data akademik kampus
 
 ## Perbandingan
 - Format paling mudah dibaca manusia: [isi dan alasan]
 - Format untuk HTML/API: [isi dan alasan]
-- Perbedaan reifikasi klasik dan RDF-star: [isi]
+- Perbedaan reifikasi klasik dan RDF-star: Reifikasi klasik lebih verbose karena RDF 1.1 tidak bisa menunjuk triple secara langsung, sehingga triple harus dibongkar menjadi resource `rdf:Statement` dengan empat triple pembungkus (type, subject, predicate, object) sebelum diberi anotasi. RDF-star menulis triple langsung sebagai subjek, `<< ex:ida ex:mengajar ex:web_semantik >> dct:creator ex:ida .`, jadi cukup satu pernyataan tanpa resource perantara. Reifikasi klasik lebih kompatibel dengan tool RDF 1.1, sedangkan RDF-star lebih ringkas tetapi butuh tool yang mendukungnya.
 
 ## Refleksi
 1. Mengapa named graph berguna saat menggabungkan data dari sumber berbeda? -> Named graph berguna saat menggabungkan data dari sumber berbeda karena kita bisa membedakan data berdasarkan sumbernya. Jadi, kita tau data tertentu berasal dari sumber mana dan tidak bercampur begitu saja.
