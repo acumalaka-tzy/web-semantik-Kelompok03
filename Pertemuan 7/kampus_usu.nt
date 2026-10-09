@@ -1,0 +1,34 @@
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web> <http://xmlns.com/foaf/0.1/name> "Pemrograman Web"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya> <http://xmlns.com/foaf/0.1/name> "Ivan Jaya"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#jumlahKredit> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#nim> "251402016" .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi> <http://xmlns.com/foaf/0.1/name> "Dedy Arisandi"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#bernaung_di> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Course> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Course> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data> <http://xmlns.com/foaf/0.1/name> "Manajemen Basis Data"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Student> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan> <http://xmlns.com/foaf/0.1/name> "Muhammad Izyan"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ida> <http://xmlns.com/foaf/0.1/name> "Muhammad Isa Dadi Hasibuan"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Faculty> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#teknologi_informasi> <http://xmlns.com/foaf/0.1/name> "Fakultas Ilmu Komputer dan Teknologi Informasi"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#yazri> <http://xmlns.com/foaf/0.1/name> "Yazri Khoiri"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Course> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#ivan_jaya> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengajar> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#pemrograman_web> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik"@id .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#izyan> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#mengambil> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#manajemen_basis_data> .
+<https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#dedy_arisandi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#Lecturer> .
