@@ -26,9 +26,9 @@
 
 
 ## Langkah 4 - Wikidata
-- Jumlah baris Q1 dengan wdt:P31: [isi]
-- Jumlah baris Q1 dengan wdt:P31/wdt:P279*: [isi]
-- Penjelasan perbedaan: [isi]
+- Jumlah baris Q1 dengan wdt:P31: 20
+- Jumlah baris Q1 dengan wdt:P31/wdt:P279*: 20
+- Penjelasan perbedaan: Perbedaan kedua query terletak pada cakupan pencarian datanya. wdt:P31 hanya mencari universitas yang secara langsung memiliki tipe Universitas. Sementara itu, wdt:P31/wdt:P279* mencakup universitas beserta kelas turunannya (subclass), sehingga pencariannya lebih luas. Meskipun kedua query menghasilkan 20 baris, hal ini karena jumlah data yang ditampilkan dibatasi menggunakan LIMIT 20.
 
 ## Langkah 5 - Endpoint dari Python
 - agent=UA: [isi]

@@ -1,0 +1,12 @@
+SELECT DISTINCT ?sungai ?sungaiLabel ?panjang
+WHERE {
+  ?sungai wdt:P31 wd:Q4022; # River
+          wdt:P2043 ?panjang; # Length
+          wdt:P17 wd:Q252. # Indonesia
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "id,en".
+  }
+}
+ORDER BY DESC(?panjang)
+LIMIT 5

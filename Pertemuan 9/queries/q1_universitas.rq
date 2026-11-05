@@ -1,0 +1,11 @@
+SELECT DISTINCT ?universitas ?universitasLabel ?kota ?kotaLabel
+WHERE {
+  ?universitas wdt:P31 wd:Q3918; # University
+               wdt:P17 wd:Q252;  # Indonesia
+               wdt:P131 ?kota.  # Administrative location
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "id,en".
+  }
+}
+LIMIT 20
