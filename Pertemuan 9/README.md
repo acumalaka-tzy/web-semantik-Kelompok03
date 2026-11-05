@@ -20,9 +20,10 @@
 3. Pola menghasilkan nol baris karena literal tanpa penanda bahasa berbeda dengan literal berpenanda bahasa @id.
 
 ## Langkah 3 - Query lokal
-- IRI dasar graf: (https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#)
+- IRI dasar graf: `https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#`
 - Jumlah triple awal / akhir: 34 / 38
-- Fakta yang ditambahkan: ex:ida ex:mengajar ex:data_mining (Muhammad Isa Dadi Hasibuan mengajar Data Mining); ditambah ex:data_mining bertipe ex:Course, foaf:name "Data Mining"@id, dan ex:jumlahKredit 3
+- Fakta yang ditambahkan: `ex:ida ex:mengajar ex:data_mining` (Muhammad Isa Dadi Hasibuan mengajar Data Mining), ditambah `ex:data_mining` bertipe `ex:Course`, `foaf:name "Data Mining"@id`, dan `ex:jumlahKredit 3`
+
 
 ## Langkah 4 - Wikidata
 - Jumlah baris Q1 dengan wdt:P31: [isi]
