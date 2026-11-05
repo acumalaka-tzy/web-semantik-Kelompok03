@@ -15,9 +15,9 @@
 - Peran ?mk: Sebagai variabel penghubung (*join key*) yang mencocokkan node mata kuliah antara Pola 1 dan Pola 2 di dalam blok `WHERE`, meskipun kolomnya disembunyikan pada hasil akhir karena tidak dicantumkan di klausa `SELECT`.
 
 ## Langkah 2 - ASK dan dunia terbuka
-1. [jawaban]
-2. [jawaban]
-3. [jawaban]
+1. Hasil: FALSE, Hasil FALSE bukan berarti Budi pasti tidak mengajar TIF2410. Artinya, informasi tersebut belum tersedia atau belum dinyatakan di dalam graf. Dalam asumsi dunia terbuka, informasi yang tidak ditemukan belum tentu berarti salah.
+2. Hasil: 5 baris, Baris dengan ?a sama dengan ?b tetap muncul karena query tidak memiliki kondisi yang membatasi kedua variabel agar berbeda.
+3. Pola menghasilkan nol baris karena literal tanpa penanda bahasa berbeda dengan literal berpenanda bahasa @id.
 
 ## Langkah 3 - Query lokal
 - IRI dasar graf: [isi]
