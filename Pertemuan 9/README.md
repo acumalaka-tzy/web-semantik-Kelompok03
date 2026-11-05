@@ -2,10 +2,17 @@
 
 ## Langkah 1 - Tabel binding
 | Tahap | ?dosen | ?mk | ?namaMK |
-|-------|--------|-----|---------|
-| [isi] | [isi]  | [isi] | [isi] |
-- Jumlah baris hasil akhir: [isi]
-- Peran ?mk: [isi]
+| :--- | :--- | :--- | :--- |
+| Pola 1, baris 1 | `ex:budi` | `ex:tif2305` | – |
+| Pola 1, baris 2 | `ex:sari` | `ex:tif2410` | – |
+| Pola 1, baris 3 | `ex:sari` | `ex:tif2305` | – |
+| Pola 2, baris 1 | – | `ex:tif2305` | `"Web Semantik"` |
+| Pola 2, baris 2 | – | `ex:tif2410` | `"Data Mining"` |
+| Hasil akhir (gabung ?mk), baris 1 | `ex:budi` | `ex:tif2305` | `"Web Semantik"` |
+| Hasil akhir (gabung ?mk), baris 2 | `ex:sari` | `ex:tif2410` | `"Data Mining"` |
+| Hasil akhir (gabung ?mk), baris 3 | `ex:sari` | `ex:tif2305` | `"Web Semantik"` |
+- Jumlah baris hasil akhir: 3
+- Peran ?mk: Sebagai variabel penghubung (*join key*) yang mencocokkan node mata kuliah antara Pola 1 dan Pola 2 di dalam blok `WHERE`, meskipun kolomnya disembunyikan pada hasil akhir karena tidak dicantumkan di klausa `SELECT`.
 
 ## Langkah 2 - ASK dan dunia terbuka
 1. [jawaban]
