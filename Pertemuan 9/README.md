@@ -31,11 +31,16 @@
 - Penjelasan perbedaan: Perbedaan kedua query terletak pada cakupan pencarian datanya. wdt:P31 hanya mencari universitas yang secara langsung memiliki tipe Universitas. Sementara itu, wdt:P31/wdt:P279* mencakup universitas beserta kelas turunannya (subclass), sehingga pencariannya lebih luas. Meskipun kedua query menghasilkan 20 baris, hal ini karena jumlah data yang ditampilkan dibatasi menggunakan LIMIT 20.
 
 ## Langkah 5 - Endpoint dari Python
-- agent=UA: [isi]
-- setReturnFormat(JSON): [isi]
-- b.get("kotaLabel", {}): [isi]
+- agent=UA: Digunakan untuk memberikan identitas aplikasi yang mengakses Wikidata. Identitas ini berupa User-Agent yang berisi nama aplikasi dan alamat email pengembang agar server dapat mengenali aplikasi yang mengirimkan permintaan data.
+- setReturnFormat(JSON): Digunakan untuk menentukan format hasil respons dari SPARQL Endpoint, yaitu JSON. Format ini memudahkan Python dalam membaca dan mengolah data yang diperoleh dari Wikidata.
+- b.get("kotaLabel", {}): Digunakan untuk mengambil nama kota dari hasil query SPARQL. Fungsi get() digunakan agar program tidak mengalami error apabila data kota tidak tersedia. Jika data tidak ditemukan, program akan memberikan nilai kosong ("").
 
 ## Refleksi
 1. Di titik mana SPARQL berbeda dari SQL?
+SPARQL dan SQL memiliki perbedaan pada cara mengakses dan mengolah data. SQL digunakan untuk mengambil data dari database relasional yang tersusun dalam tabel, baris, dan kolom. Sementara itu, SPARQL digunakan untuk mengambil data dari RDF yang direpresentasikan dalam bentuk graf dengan struktur Subject, Predicate, dan Object. SQL menggunakan perintah seperti SELECT, FROM, dan WHERE, sedangkan SPARQL menggunakan pola triple untuk mencari hubungan antar-data. Dengan demikian, SPARQL lebih berfokus pada hubungan dan keterkaitan antar-entitas.
+
 2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
+Graf lokal menggunakan library RDFLib lebih cocok digunakan ketika ingin mengolah data RDF yang tersimpan secara lokal, melakukan pengujian query, atau mengembangkan aplikasi tanpa bergantung pada koneksi internet. Sementara itu, endpoint publik digunakan ketika membutuhkan data yang lebih luas dan tersedia secara online, seperti Wikidata. Endpoint publik memungkinkan pengguna mengambil informasi dari sumber data yang dapat diakses oleh banyak orang tanpa harus mengunduh seluruh dataset terlebih dahulu.
+
 3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
+Salah satu hal yang menarik dari hasil query Wikidata adalah terdapat universitas yang lokasi administratifnya tercatat di wilayah kabupaten, bukan hanya di kota. Hal ini cukup menarik karena nama universitas sering kali lebih dikenal berdasarkan nama kota besar di sekitarnya. Penyebabnya adalah Wikidata menyimpan informasi lokasi berdasarkan hubungan administratif yang tercatat dalam basis pengetahuannya. Oleh karena itu, hasil query dapat menunjukkan lokasi administratif yang lebih spesifik dibandingkan perkiraan berdasarkan nama universitas.
