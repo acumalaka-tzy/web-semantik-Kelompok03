@@ -22,8 +22,8 @@
 - Source: Data akademik kampus
 
 ## Perbandingan
-- Format paling mudah dibaca manusia: [isi dan alasan]
-- Format untuk HTML/API: [isi dan alasan]
+- Format paling mudah dibaca manusia: Menggunakan @prefix untuk menyingkat IRI yang panjang serta mendukung pengelompokan subjek yang sama dengan tanda titik koma (;) dan koma (,), sehingga strukturnya ringkas dan tidak berulang-ulang seperti N-Triples. (Catatan: Untuk dataset yang memuat blok named graph seperti kode di atas, ekstensi sintaks Turtle-nya disebut TriG).
+- Format untuk HTML/API: SON-LD (.jsonld) — Berbasis format standar JSON yang sudah menjadi standar de facto komunikasi REST API modern, mudah di-parse secara native oleh JavaScript di browser, dan dapat disematkan langsung di dalam dokumen HTML melalui tag <script type="application/ld+json"> untuk kebutuhan SEO (Schema.org).
 - Perbedaan reifikasi klasik dan RDF-star: Reifikasi klasik lebih verbose karena RDF 1.1 tidak bisa menunjuk triple secara langsung, sehingga triple harus dibongkar menjadi resource `rdf:Statement` dengan empat triple pembungkus (type, subject, predicate, object) sebelum diberi anotasi. RDF-star menulis triple langsung sebagai subjek, `<< ex:ida ex:mengajar ex:web_semantik >> dct:creator ex:ida .`, jadi cukup satu pernyataan tanpa resource perantara. Reifikasi klasik lebih kompatibel dengan tool RDF 1.1, sedangkan RDF-star lebih ringkas tetapi butuh tool yang mendukungnya.
 
 ## Refleksi
