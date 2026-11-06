@@ -11,9 +11,9 @@
 | N-Quads   | Menambahkan konteks graf                 | Digunakan untuk menyimpan beberapa graph sekaligus dalam satu dataset RDF yang memiliki konteks atau sumber berbeda.    |
 
 ## Artefak
-- Graf asal: [jumlah triple]
+- Graf asal: 34 triple
 - Format ekspor: Turtle, JSON-LD, N-Triples
-- Named graph: [nama graf 1] dan [nama graf 2]
+- Named graph: kampus dan fakultas
 
 ## Reifikasi dan provenance
 - Triple yang dianotasi: `ex:ida ex:mengajar ex:web_semantik`
