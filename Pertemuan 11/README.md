@@ -32,11 +32,11 @@
 - Dosen baru setelah program selesai: Dosen baru tidak otomatis menjadi `foaf:Person`. Materialisasi hanya menghitung data yang ada saat query dijalankan, lalu hasilnya disimpan sebagai triple biasa. Jadi dosen yang ditambahkan sesudahnya hanya punya `a ex:Lecturer`, dan baru ikut menjadi `ex:Pegawai` dan `foaf:Person` jika program dijalankan ulang (atau jika memakai reasoner yang menghitung ulang otomatis).
 
 ## Langkah 4 - Wikidata
-- Jumlah triple Q6: [isi]
-- Jumlah baris Q6 versi SELECT: [isi]
-- Penjelasan perbedaan: [isi]
-- Q7 dengan + vs *: [isi]
-- Kelas yang mengejutkan dan alasannya: [isi]
+- Jumlah triple Q6: 144
+- Jumlah baris Q6 versi SELECT: 50
+- Penjelasan perbedaan: setiap baris SELECT akan menghasilkan tiga triple RDF, sehingga 50 baris seharusnya menghasilkan 150 triple. Namun, hasil CONSTRUCT hanya menghasilkan 144 triple. Perbedaan ini terjadi karena graf RDF tidak menyimpan triple yang duplikat. Apabila terdapat triple yang sama dari beberapa baris hasil SELECT, triple tersebut hanya dihitung satu kali. Dengan demikian, terdapat selisih 6 triple dari perhitungan teoritis.
+- Q7 dengan + vs *: Operator + digunakan untuk mencari seluruh subkelas universitas yang memiliki minimal satu hubungan hierarki dengan kelas universitas (Q3918). Sementara itu, operator * digunakan untuk mencari subkelas dengan nol atau lebih hubungan hierarki. Dengan demikian, operator * juga dapat menampilkan kelas universitas itu sendiri (Q3918), sedangkan operator + hanya menampilkan kelas turunannya.
+- Kelas yang mengejutkan dan alasannya: Kelas yang cukup mengejutkan adalah Coast Guard Academy (Akademi Penjaga Pantai). Kelas ini menarik karena merupakan institusi pendidikan yang memiliki fungsi khusus dalam melatih personel penjaga pantai. Kelas tersebut dapat menjadi subkelas universitas karena akademi ini termasuk lembaga pendidikan tinggi yang menyelenggarakan pendidikan dan pelatihan profesional pada bidang tertentu. Hal ini menunjukkan bahwa universitas tidak hanya mencakup institusi pendidikan umum, tetapi juga lembaga pendidikan khusus dengan bidang dan tujuan tertentu.
 
 ## Langkah 5 - Graf dari Python
 - Jumlah triple universitas.ttl: [isi]
