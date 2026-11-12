@@ -27,13 +27,32 @@ Bagian C - Materialisasi
 | rusak_b | 4 triple | Dua nilai yang tampak sama | Baris `?o foaf:name\|rdfs:label\|schema:name ?n .` mengambil dua literal nama `dbr:Christopher_Nolan` yang berbeda tag bahasa (`"Christopher Nolan"` tanpa tag dari `foaf:name` dan `"Christopher Nolan"@en` dari `rdfs:label`) sehingga dianggap sebagai dua triple berbeda oleh RDF. | 3 triple (tepat satu `ex:nama` tanpa tag bahasa untuk `dbr:Christopher_Nolan`, `dbr:Joko_Anwar`, dan `dbr:Mira_Lesmana`) |
 | rusak_c | 0 triple | Superkelas tidak ditemukan | Baris `?x a ex:Permukiman .` pada `WHERE` tidak memakai jalur properti `a/rdfs:subClassOf*`, padahal Medan, Surabaya, dan Tomok dideklarasikan sebagai instan dari subkelas `ex:Permukiman`. | 3 triple (`ex:Medan`, `ex:Surabaya`, dan `ex:Tomok` bertipe `ex:Permukiman`) |
 ## Bagian E - Etika dan diskusi
-| Aturan | a_kota_limit.rq | demo_c.py |
-|--------|-----------------|-----------|
-| 1 User-Agent | [isi] | [isi] |
-| 2 LIMIT | [isi] | [isi] |
-| 3 Simpan, jangan ulangi | [isi] | [isi] |
-| 4 Jangkar jalur | [isi] | [isi] |
-- Versi yang melanggar aturan 4 (tidak dijalankan) dan alasannya: [isi]
+## Bagian E - Etika Endpoint dan Diskusi
+
+### E1 - Etika endpoint
+| Aturan | Pemeriksaan pada `a_kota_limit.rq` | Pemeriksaan pada `demo_c.py` |
+|--------|------------------------------------|------------------------------|
+| **1. User-Agent bermakna** | Tidak relevan langsung di dalam teks query `.rq` karena header HTTP diatur oleh aplikasi klien atau browser saat mengirim request. | Dipenuhi pada baris `UA = "KelasWebSemantik/1.0 (mahasiswa@usu.ac.id)"` dan `sp = SPARQLWrapper("https://dbpedia.org/sparql", agent=UA)`. |
+| **2. LIMIT saat eksplorasi** | Dipenuhi dengan klausa `LIMIT 10` di akhir query untuk membatasi jumlah *solution* yang dievaluasi oleh endpoint Wikidata. | Tidak menggunakan `LIMIT` karena ruang pencarian sudah dipersempit secara spesifik pada satu sutradara (`dbo:director dbr:Christopher_Nolan`) yang hanya memiliki 16 film. |
+| **3. Simpan, jangan ulangi** | Tidak relevan di dalam berkas query `.rq` karena penyimpanan berkas diatur pada sisi skrip atau unduhan manual. | Dipenuhi pada baris `g.serialize("film_nolan.ttl", format="turtle")` dan `lokal = Graph().parse("film_nolan.ttl")`, sehingga query lanjutan (`Q_TANPA_TANGGAL`) dijalankan secara lokal tanpa membebani DBpedia lagi. |
+| **4. Jangkar jalur** | Dipenuhi pada pola `?kota wdt:P31/wdt:P279* wd:Q515` (serta `wdt:P17 wd:Q252`), di mana jalur `wdt:P279*` dijangkarkan secara eksplisit ke IRI kelas kota (`wd:Q515`). | Tidak menggunakan operator jalur berulang (`*` atau `+`), melainkan terpaut langsung ke jangkar IRI `dbr:Christopher_Nolan` dan `dbo:Film`. |
+
+- **Versi `a_kota_limit.rq` yang melanggar Aturan 4 :**
+  ```sparql
+  CONSTRUCT {
+    ?kota a ex:Kota ;
+          ex:nama ?nama ;
+          ex:populasi ?pop .
+  }
+  WHERE {
+    ?kota wdt:P31/wdt:P279* ?kelas .
+    ?kota wdt:P17 ?negara ;
+          wdt:P1082 ?pop ;
+          rdfs:label ?nama .
+    FILTER(LANG(?nama) = "id")
+  }
+  LIMIT 10
+###alsannya Mengapa versi tersebut jauh lebih mahal bagi endpoint Karena ujung kanan jalur wdt:P31/wdt:P279* dan properti negara diganti menjadi variabel bebas (?kelas dan ?negara) tanpa jangkar IRI (wd:Q515 dan wd:Q252). Mesin SPARQL tidak dapat melakukan pencarian terarah dari satu titik, melainkan harus menelusuri penutupan transitif (transitive closure) seluruh hierarki subkelas untuk jutaan entitas di seluruh Wikidata sebelum menerapkan filter, yang memicu ledakan kombinasi (combinatorial explosion) dan timeout.
 
 ### Diskusi 1 - Taksonomi berubah
 [150-250 kata]
