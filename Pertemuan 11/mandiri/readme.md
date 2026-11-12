@@ -3,7 +3,7 @@
 ## Bagian A - LIMIT dan triple
 - Triple dengan LIMIT 10: 30
 - Triple dengan LIMIT 30: 90
-- Baris SELECT LIMIT 10 / kota berbeda: [isi] / [isi]
+- Baris SELECT LIMIT 10 / kota berbeda: 10 / 10 kota unik
 - Mengapa tidak (atau mengapa tepat) 30 triple: [jawaban]
 
 ## Bagian B - DBpedia ke Turtle
