@@ -1,8 +1,8 @@
-# Pertemuan 11 - Tugas Mandiri: Dari Endpoint ke Graf Lokal
+# Pertemuan 11 - Tugas Mandiri: Dari Endpoint ke Graf Lokal - alidvaRoelyaPadang_251402007
 
 ## Bagian A - LIMIT dan triple
-- Triple dengan LIMIT 10: [isi]
-- Triple dengan LIMIT 30: [isi]
+- Triple dengan LIMIT 10: 30
+- Triple dengan LIMIT 30: 90
 - Baris SELECT LIMIT 10 / kota berbeda: [isi] / [isi]
 - Mengapa tidak (atau mengapa tepat) 30 triple: [jawaban]
 
