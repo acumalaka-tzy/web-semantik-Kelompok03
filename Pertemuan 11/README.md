@@ -39,13 +39,18 @@
 - Kelas yang mengejutkan dan alasannya: Kelas yang cukup mengejutkan adalah Coast Guard Academy (Akademi Penjaga Pantai). Kelas ini menarik karena merupakan institusi pendidikan yang memiliki fungsi khusus dalam melatih personel penjaga pantai. Kelas tersebut dapat menjadi subkelas universitas karena akademi ini termasuk lembaga pendidikan tinggi yang menyelenggarakan pendidikan dan pelatihan profesional pada bidang tertentu. Hal ini menunjukkan bahwa universitas tidak hanya mencakup institusi pendidikan umum, tetapi juga lembaga pendidikan khusus dengan bidang dan tujuan tertentu.
 
 ## Langkah 5 - Graf dari Python
-- Jumlah triple universitas.ttl: [isi]
-- Jumlah baris universitas_per_kota.csv: [isi]
-- setReturnFormat(TURTLE): [isi]
-- Graph().parse(data=...): [isi]
-- Mengapa q_kota tidak memanggil endpoint: [isi]
+- Jumlah triple universitas.ttl: 138
+- Jumlah baris universitas_per_kota.csv: 42
+- setReturnFormat(TURTLE): Digunakan untuk menentukan format hasil query dari endpoint Wikidata menjadi Turtle agar data RDF dapat diproses dan disimpan.
+- Graph().parse(data=...): Digunakan untuk membaca respons Turtle dan mengubahnya menjadi objek Graph menggunakan RDFLib sehingga data dapat diolah secara lokal.
+- Mengapa q_kota tidak memanggil endpoint: Karena q_kota dijalankan menggunakan g.query(q_kota) terhadap graf RDF yang sudah berada di memori lokal. Data telah diambil dari Wikidata sebelumnya sehingga tidak perlu mengirim permintaan baru ke endpoint.
 
 ## Refleksi
 1. Mengapa jumlah triple hasil CONSTRUCT bisa lebih kecil dari jumlah baris SELECT dengan WHERE yang sama?
+-> Karena CONSTRUCT menghasilkan graf RDF yang hanya menyimpan triple unik. Jika beberapa baris SELECT menghasilkan triple yang sama, triple tersebut hanya disimpan satu kali. Oleh karena itu, jumlah triple CONSTRUCT dapat lebih sedikit daripada jumlah baris SELECT.
+
 2. Bila taksonomi di graf kampus Anda berubah bulan depan, apa yang terjadi pada triple turunan di kampus_usu_v4.ttl?
+-> Triple turunan yang sudah tersimpan tidak otomatis berubah ketika taksonomi diperbarui. Graf perlu dimaterialisasi atau dibentuk ulang agar triple turunannya sesuai dengan taksonomi terbaru.
+
 3. Kapan Anda menyimpan hasil query sebagai tabel (CSV), dan kapan sebagai graf (Turtle)?
+-> CSV digunakan ketika hasil query berupa data tabular yang akan dianalisis, dihitung, atau diolah menggunakan spreadsheet. Sementara itu, Turtle digunakan ketika hasil query berupa graf RDF yang memiliki hubungan antarentitas dan perlu disimpan dalam bentuk subject, predicate, dan object.
