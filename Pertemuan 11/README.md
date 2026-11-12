@@ -3,19 +3,25 @@
 ## Langkah 1 - Solution menjadi triple
 | Solution | ?d | ?mk | Triple yang dicetak |
 |----------|----|-----|---------------------|
-| [isi]    | [isi] | [isi] | [isi]           |
-- Jumlah solution: [isi]
-- Jumlah cetakan triple: [isi]
-- Jumlah triple di graf hasil: [isi]
-- Triple yang tercetak lebih dari sekali: [isi]
+| 1 | `ex:budi` | `ex:tif2108` | `ex:tif2108 a ex:MataKuliahAktif .`<br>`ex:tif2108 ex:diampuOleh ex:budi .` |
+| 2 | `ex:budi` | `ex:tif2104` | `ex:tif2104 a ex:MataKuliahAktif .`<br>`ex:tif2104 ex:diampuOleh ex:budi .` |
+| 3 | `ex:sari` | `ex:tif2108` | `ex:tif2108 a ex:MataKuliahAktif .`<br>`ex:tif2108 ex:diampuOleh ex:sari .` |
+| 4 | `ex:ida` | `ex:tif2104` | `ex:tif2104 a ex:MataKuliahAktif .`<br>`ex:tif2104 ex:diampuOleh ex:ida .` |
+
+- Jumlah solution: 4
+- Jumlah cetakan triple: 8 (4 solution × 2 pola template)
+- Jumlah triple di graf hasil: 6
+- Triple yang tercetak lebih dari sekali:
+  - `ex:tif2108 a ex:MataKuliahAktif .` (tercetak 2 kali, pada Solution 1 dan 3)
+  - `ex:tif2104 a ex:MataKuliahAktif .` (tercetak 2 kali, pada Solution 2 dan 4)
 
 ## Langkah 2 - Tebak lalu cek
 | Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|---------|-------------|-------------------------|
-| A    | [isi]   | [isi]       | [isi]                   |
-| B    | [isi]   | [isi]       | [isi]                   |
-| C    | [isi]   | [isi]       | [isi]                   |
-| D    | [isi]   | [isi]       | [isi]                   |
+| A | 2 baris | 3 baris | Operator property path `*` (zero or more) bersifat refleksif (mencocokkan jalur panjang 0), sehingga `ex:Dosen` ikut dihitung sebagai subkelas dari dirinya sendiri selain `ex:DosenTetap` dan `ex:DosenTamu`. |
+| B | 3 baris | 4 baris (`ex:sari` muncul 2 kali) | `SELECT` tanpa `DISTINCT` mempertahankan multiset (duplikat baris), dan `ex:sari` memiliki dua jalur pencocokan yang valid ke `ex:Pegawai` (melalui `ex:DosenTetap` dan `ex:DosenTamu`). |
+| C | 4 triple | 3 triple | Meskipun klausa `WHERE` menghasilkan 4 solution (dengan `ex:sari` dua kali), `CONSTRUCT` membentuk graf RDF yang merupakan himpunan (set), sehingga triple `ex:sari a ex:Pegawai` yang identik otomatis dideduplikasi menjadi satu. |
+| D | 1 triple / Error | 0 triple (Tidak ada pesan error) | `ex:rudi` tidak memiliki properti `ex:nama` sehingga variabel `?n` berstatus *unbound* (kosong); aturan standar SPARQL `CONSTRUCT` secara otomatis mengabaikan pembuatan triple yang mengandung variabel *unbound* tanpa memicu error. |
 
 ## Langkah 3 - Graf kampus lokal
 - Berkas sumber dan IRI dasar graf: [isi]

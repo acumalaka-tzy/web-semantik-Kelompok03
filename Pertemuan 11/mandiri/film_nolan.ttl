@@ -1,0 +1,68 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dbr:Cinema16__British_Short_Films a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Cinema16: British Short Films"@en .
+
+dbr:Doodlebug_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Doodlebug (film)"@en .
+
+dbr:Dunkirk_\(2017_film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Dunkirk (2017 film)"@en .
+
+dbr:Following a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Following"@en .
+
+dbr:Inception a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Inception"@en .
+
+dbr:Insomnia_\(2002_film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Insomnia (2002 film)"@en .
+
+dbr:Interstellar_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Interstellar (film)"@en .
+
+dbr:Larceny_\(1996_film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Larceny (1996 film)"@en .
+
+dbr:Memento_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Memento (film)"@en .
+
+dbr:Oppenheimer_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Oppenheimer (film)"@en .
+
+dbr:Quay_\(film\) a schema:Movie ;
+    schema:datePublished "2015-08-19"^^xsd:date ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Quay (film)"@en .
+
+dbr:Tarantella_\(1989_film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Tarantella (1989 film)"@en .
+
+dbr:Tenet_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "Tenet (film)"@en .
+
+dbr:The_Dark_Knight a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "The Dark Knight"@en .
+
+dbr:The_Dark_Knight_Rises a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "The Dark Knight Rises"@en .
+
+dbr:The_Prestige_\(film\) a schema:Movie ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:name "The Prestige (film)"@en .
