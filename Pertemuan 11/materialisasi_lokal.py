@@ -1,23 +1,27 @@
 from pathlib import Path
 from rdflib import Graph
 
-SUMBER = Path("../pertemuan-10/kampus_usu_v3.ttl")
-if not SUMBER.exists():                       # belum punya v3? pakai v2
-    SUMBER = Path("../pertemuan-09/kampus_usu_v2.ttl")
-g = Graph().parse(SUMBER, format="turtle")
+BASE = Path(__file__).resolve().parent            # folder Pertemuan 11
+SUMBER = BASE.parent / "Pertemuan 7" / "kampus_usu.ttl"
+print("Mencari:", SUMBER, "| ada?", SUMBER.exists())
+g = Graph().parse(data=SUMBER.read_text(encoding="utf-8"), format="turtle")
 print("Sumber:", SUMBER, "| triple awal:", len(g))
 
+# TODO: ganti IRI ex: persis sama dengan prefix ex: di berkas kampus_usu Anda
+# (cek baris "@prefix ex:" di kampus_usu_v3.ttl / v2.ttl, termasuk akhiran # atau /)
 PREFIX = """
-PREFIX ex:     <https://contoh.github.io/web-semantik/ISI_NIM/kampus#>;
-PREFIX foaf:   <http://xmlns.com/foaf/0.1/>;
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>;
-PREFIX schema: <https://schema.org/>;
+PREFIX ex:     <https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#>
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 """
 
 # A. Pemetaan ke schema.org: graf baru, IRI tetap
+# TODO: ganti Dosen dengan nama kelas dosen di graf Anda (mis. Dosen / Lecturer)
+# TODO: bila properti nama bukan foaf:name, ganti juga
 q_peta = PREFIX + """
 CONSTRUCT { ?d a schema:Person ; schema:name ?nama . }
-WHERE { ?d a ex:ISI_KELAS_DOSEN ; foaf:name ?nama . }
+WHERE { ?d a ex:Lecturer ; foaf:name ?nama . }
 """
 peta = Graph()
 for t in g.query(q_peta):
@@ -28,8 +32,8 @@ peta.serialize("dosen_schema.ttl", format="turtle")
 # B. Tambah hierarki kecil, lalu materialisasi
 g.update(PREFIX + """
 INSERT DATA {
-  ex:ISI_KELAS_DOSEN rdfs:subClassOf ex:Pegawai .
-  ex:Pegawai         rdfs:subClassOf foaf:Person .
+  ex:Lecturer rdfs:subClassOf ex:Pegawai .
+  ex:Pegawai rdfs:subClassOf foaf:Person .
 }
 """)
 q_orang = PREFIX + "SELECT ?x WHERE { ?x a foaf:Person }"
