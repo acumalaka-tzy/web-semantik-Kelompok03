@@ -1,7 +1,6 @@
 # Pertemuan 11 - Tugas Mandiri: Dari Endpoint ke Graf Lokal
 
-**Nama:** Muhammad Izyan Roshan 
-**NIM:** 251402110
+**Nama:** Muhammad Izyan Roshan (251402110)
 
 ## Bagian A - LIMIT dan triple
 - Triple dengan LIMIT 10: 30
@@ -98,6 +97,6 @@ Untuk tiga sumber, kebutuhannya graf bersama, jadi CONSTRUCT cocok. Tiap sumber 
 |------------|----------------------|
 | 1 | CONSTRUCT mencetak template sekali per solution dan menggabungkan triple kembar. rusak_b.rq setelah perbaikan (D): 4 solution menjadi 3 triple, karena dua nilai Nolan melebur. Bagian A: LIMIT 10 dengan batas atas 30 menghasilkan [isi angka Anda] triple |
 | 2 | Triple dengan variabel tak terikat tidak dicetak, tanpa error. rusak_a.rq (D): ?film tidak terikat, hasilnya 0 triple. B2: film_nolan.ttl berisi 16 film × 3 triple = 48 triple, tanpa satu pun schema:datePublished |
-| 3 | UNION, jalur "|", dan VALUES menyatukan predikat berbeda. rusak_b.rq (D): VALUES ditambah "foaf:name|rdfs:label|schema:name" menyatukan tiga predikat dari tiga orang menjadi ex:nama, dengan hasil akhir 3 triple |
+| 3 | UNION dan VALUES menyatukan predikat berbeda. rusak_b.rq (D): VALUES ditambah foaf:name rdfs:label schema:name menyatukan tiga predikat dari tiga orang menjadi ex:nama, dengan hasil akhir 3 triple |
 | 4 | Jalur + dan * menelusuri hierarki tanpa menyebut perantara. perbaikan_c.rq (D): a/rdfs:subClassOf* mengubah hasil dari 0 menjadi 3 triple (Medan, Surabaya, Tomok) tanpa menyebut ex:Kota, ex:Desa, atau ex:KotaMetropolitan. C1: Person naik dari 0 menjadi 3 |
 | 5 | Materialisasi menyimpan kesimpulan, tetapi harus dihitung ulang. C1: setelah Rina masuk, Person tetap 3. C2: setelah putaran 2 menjadi 4, dan kampus_turunan.ttl berisi 6 triple |
