@@ -1,0 +1,7 @@
+# --- perbaikan_c.rq ---
+# Tambahkan jalur property path a/rdfs:subClassOf* untuk menjangkau turunan subkelas
+CONSTRUCT { ?x a ex:Permukiman . }
+WHERE {
+  ?x a/rdfs:subClassOf* ex:Permukiman .
+}
+
