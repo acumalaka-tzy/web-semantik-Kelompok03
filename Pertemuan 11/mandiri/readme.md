@@ -7,11 +7,11 @@
 - Mengapa tidak (atau mengapa tepat) 30 triple: Ya, mencapai 30 triple,Klausa LIMIT 10 di dalam WHERE membatasi jumlah baris pencocokan pola (solution mapping) sebanyak 10 baris, bukan membatasi jumlah triple. Karena ke-10 baris yang keluar memiliki subjek kota yang seluruhnya unik (tidak ada kota yang muncul dua kali), maka setiap baris akan mengisi 3 pola di blok CONSTRUCT dan menghasilkan 10 x  3 = 30 triple yang semuanya unik.
 
 ## Bagian B - DBpedia ke Turtle
-- Output demo_c.py: [isi] triple, film tanpa tanggal: [isi]
-- Sumber data: DBpedia / data contoh film.ttl
-- Triple yang tetap tercetak untuk film tanpa tanggal: [jawaban]
-- Query lokal tanpa internet: [jawaban]
-- Mengapa dbo:Film memberi 0 pada film_nolan.ttl: [jawaban]
+- Output demo_c.py: 49 triple, film tanpa tanggal: 15
+- Sumber data: DBpedia
+- Triple yang tetap tercetak untuk film tanpa tanggal: Triple yang tetap tercetak adalah `?film a schema:Movie`, `?film schema:name ?judul`, dan `?film schema:director dbr:Christopher_Nolan`, sedangkan triple `?film schema:datePublished ?rilis` tidak tercetak. Tidak ada pesan error karena klausa `OPTIONAL` membiarkan variabel `?rilis` tetap kosong (*unbound*) saat film tidak memiliki `dbo:releaseDate`, dan spesifikasi SPARQL `CONSTRUCT` secara otomatis melewati pembentukan pola triple yang mengandung variabel *unbound* tanpa menggagalkan eksekusi query.
+- Query lokal tanpa internet: Menjalankan `Q_TANPA_TANGGAL` saja tetap berhasil karena `rdflib` membaca graf RDF langsung dari berkas lokal `film_nolan.ttl` yang sudah tersimpan di komputer sehingga tidak memerlukan koneksi jaringan. Sebaliknya, jika seluruh `demo_c.py` dijalankan ulang tanpa internet, program akan berhenti dan menghasilkan pesan error koneksi (`URLError` / `gaierror`) pada baris `sp.queryAndConvert()` karena gagal menghubungi endpoint jarak jauh `https://dbpedia.org/sparql`.
+- Mengapa dbo:Film memberi 0 pada film_nolan.ttl: Karena saat membangun graf lokal melalui `CONSTRUCT` pada `q_demo_b.rq`, tipe kelas setiap film telah ditransformasikan menjadi `schema:Movie` (`?film a schema:Movie`). Akibatnya, kelas asli `dbo:Film` dari DBpedia tidak ikut tertulis di dalam berkas `film_nolan.ttl`, sehingga pencarian menggunakan `dbo:Film` menghasilkan 0 kecocokan.
 
 ## Bagian C - Materialisasi
 - Output demo_d.py: [isi]
