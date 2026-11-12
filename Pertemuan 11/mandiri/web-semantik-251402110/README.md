@@ -1,10 +1,12 @@
 # Pertemuan 11 - Tugas Mandiri: Dari Endpoint ke Graf Lokal
 
 ## Bagian A - LIMIT dan triple
-- Triple dengan LIMIT 10: [isi]
-- Triple dengan LIMIT 30: [isi]
-- Baris SELECT LIMIT 10 / kota berbeda: [isi] / [isi]
-- Mengapa tidak (atau mengapa tepat) 30 triple: [jawaban]
+- Triple dengan LIMIT 10: 30
+- Triple dengan LIMIT 30: 90
+- Baris SELECT LIMIT 10 / kota berbeda: 10 baris / 10 kota unik
+- Mengapa tidak (atau mengapa tepat) 30 triple: Graf RDF adalah himpunan, jadi triple yang identik hanya dihitung satu kali. Kalau satu kota muncul di lebih dari satu solution, sebagian triple-nya kembar dan menyusut. Penyebab satu kota muncul berkali-kali:
+  - Kota punya lebih dari satu nilai populasi (wdt:P1082), sehingga tiap nilai jadi solution sendiri.
+  - Kota punya beberapa jalur wdt:P31/wdt:P279* menuju wd:Q515, sehingga baris yang sama muncul ganda.
 
 ## Bagian B - DBpedia ke Turtle
 - Output demo_c.py: [isi] triple, film tanpa tanggal: [isi]
