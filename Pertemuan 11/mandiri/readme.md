@@ -23,10 +23,9 @@ Bagian C - Materialisasi
 ## Bagian D - Diagnosis
 | Query | Hasil mesin | Gejala | Penyebab (baris yang salah) | Hasil setelah diperbaiki |
 |-------|-------------|--------|-----------------------------|--------------------------|
-| rusak_a | 0 triple | Graf kosong, tanpa error | Baris `CONSTRUCT { ?film ex:judul ?j . }` memakai variabel `?film` yang tidak terikat (*unbound*) karena pada `WHERE` baris `?f dbo:director dbr:Christopher_Nolan` variabel film ditulis sebagai `?f`. | 3 triple (`dbr:Inception`, `dbr:Interstellar`, `dbr:Oppenheimer` masing-masing 1 `ex:judul`) |
-| rusak_b | 6 triple | Dua nilai yang tampak sama | Baris `?o foaf:name\|rdfs:label\|schema:name ?n .` mengambil beberapa literal nama dengan tag bahasa berbeda (misal `@id`, `@en`, dan tanpa tag bahasa) sehingga dianggap nilai berbeda oleh RDF dan tidak digabung oleh `CONSTRUCT`. | 3 triple (tepat satu `ex:nama` per orang untuk `dbr:Christopher_Nolan`, `dbr:Joko_Anwar`, dan `dbr:Mira_Lesmana`) |
-| rusak_c | 0 triple | Superkelas tidak ditemukan | Baris `?x a ex:Permukiman .` pada `WHERE` tidak memakai jalur properti `a/rdfs:subClassOf*`, padahal Medan, Surabaya, dan Tomok dideklarasikan sebagai instan dari subkelas `ex:Permukiman` (`ex:Kota` dan `ex:Desa`). | 3 triple (`ex:Medan`, `ex:Surabaya`, dan `ex:Tomok` bertipe `ex:Permukiman`) |
-
+| rusak_a | 0 triple | Graf kosong, tanpa error | Baris `CONSTRUCT { ?film ex:judul ?j . }` memakai variabel `?film` yang tidak terikat (*unbound*) karena pada `WHERE` baris `?f dbo:director dbr:Christopher_Nolan` variabel film ditulis sebagai `?f`. | 3 triple (masing-masing satu `ex:judul` untuk `dbr:Following`, `dbr:Memento`, dan `dbr:Insomnia`) |
+| rusak_b | 4 triple | Dua nilai yang tampak sama | Baris `?o foaf:name\|rdfs:label\|schema:name ?n .` mengambil dua literal nama `dbr:Christopher_Nolan` yang berbeda tag bahasa (`"Christopher Nolan"` tanpa tag dari `foaf:name` dan `"Christopher Nolan"@en` dari `rdfs:label`) sehingga dianggap sebagai dua triple berbeda oleh RDF. | 3 triple (tepat satu `ex:nama` tanpa tag bahasa untuk `dbr:Christopher_Nolan`, `dbr:Joko_Anwar`, dan `dbr:Mira_Lesmana`) |
+| rusak_c | 0 triple | Superkelas tidak ditemukan | Baris `?x a ex:Permukiman .` pada `WHERE` tidak memakai jalur properti `a/rdfs:subClassOf*`, padahal Medan, Surabaya, dan Tomok dideklarasikan sebagai instan dari subkelas `ex:Permukiman`. | 3 triple (`ex:Medan`, `ex:Surabaya`, dan `ex:Tomok` bertipe `ex:Permukiman`) |
 ## Bagian E - Etika dan diskusi
 | Aturan | a_kota_limit.rq | demo_c.py |
 |--------|-----------------|-----------|
