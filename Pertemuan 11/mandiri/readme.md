@@ -4,7 +4,7 @@
 - Triple dengan LIMIT 10: 30
 - Triple dengan LIMIT 30: 90
 - Baris SELECT LIMIT 10 / kota berbeda: 10 / 10 kota unik
-- Mengapa tidak (atau mengapa tepat) 30 triple: [jawaban]
+- Mengapa tidak (atau mengapa tepat) 30 triple: Ya, mencapai 30 triple,Klausa LIMIT 10 di dalam WHERE membatasi jumlah baris pencocokan pola (solution mapping) sebanyak 10 baris, bukan membatasi jumlah triple. Karena ke-10 baris yang keluar memiliki subjek kota yang seluruhnya unik (tidak ada kota yang muncul dua kali), maka setiap baris akan mengisi 3 pola di blok CONSTRUCT dan menghasilkan 10 x  3 = 30 triple yang semuanya unik.
 
 ## Bagian B - DBpedia ke Turtle
 - Output demo_c.py: [isi] triple, film tanpa tanggal: [isi]
