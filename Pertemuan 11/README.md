@@ -24,12 +24,12 @@
 | D | 1 triple / Error | 0 triple (Tidak ada pesan error) | `ex:rudi` tidak memiliki properti `ex:nama` sehingga variabel `?n` berstatus *unbound* (kosong); aturan standar SPARQL `CONSTRUCT` secara otomatis mengabaikan pembuatan triple yang mengandung variabel *unbound* tanpa memicu error. |
 
 ## Langkah 3 - Graf kampus lokal
-- Berkas sumber dan IRI dasar graf: [isi]
-- Kelas dosen dan properti nama: [isi]
-- Triple hasil pemetaan: [isi]
-- foaf:Person sebelum / sesudah: [isi] / [isi]
-- Triple asli vs triple turunan: [jawaban]
-- Dosen baru setelah program selesai: [jawaban]
+- Berkas sumber dan IRI dasar graf: `../Pertemuan 7/kampus_usu.ttl`; IRI dasar `https://zann-37.github.io/web-semantik-Kelompok03/251402110/kampus#`
+- Kelas dosen dan properti nama: `ex:Lecturer` dan `foaf:name`
+- Triple hasil pemetaan: 6 (3 dosen × 2 triple: `a schema:Person` dan `schema:name`)
+- foaf:Person sebelum / sesudah: 0 / 3
+- Triple asli vs turunan: Bisa dibedakan. Triple asli adalah yang saya tulis sendiri, yaitu data di `kampus_usu.ttl` (misalnya `ex:ida a ex:Lecturer`) dan dua pernyataan hierarki dari `INSERT DATA` (`ex:Lecturer rdfs:subClassOf ex:Pegawai` dan `ex:Pegawai rdfs:subClassOf foaf:Person`). Triple turunan adalah hasil materialisasi, sebanyak 6, yaitu `a ex:Pegawai` dan `a foaf:Person` untuk masing-masing dari 3 dosen (misalnya `ex:ida a foaf:Person`). Tidak ada satu pun yang saya ketik; semuanya dihitung dari hierarki `rdfs:subClassOf`. Setelah program selesai, keduanya sama-sama tertulis di `kampus_usu_v4.ttl`.
+- Dosen baru setelah program selesai: Dosen baru tidak otomatis menjadi `foaf:Person`. Materialisasi hanya menghitung data yang ada saat query dijalankan, lalu hasilnya disimpan sebagai triple biasa. Jadi dosen yang ditambahkan sesudahnya hanya punya `a ex:Lecturer`, dan baru ikut menjadi `ex:Pegawai` dan `foaf:Person` jika program dijalankan ulang (atau jika memakai reasoner yang menghitung ulang otomatis).
 
 ## Langkah 4 - Wikidata
 - Jumlah triple Q6: [isi]
