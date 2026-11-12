@@ -13,12 +13,12 @@
 - Query lokal tanpa internet: Menjalankan `Q_TANPA_TANGGAL` saja tetap berhasil karena `rdflib` membaca graf RDF langsung dari berkas lokal `film_nolan.ttl` yang sudah tersimpan di komputer sehingga tidak memerlukan koneksi jaringan. Sebaliknya, jika seluruh `demo_c.py` dijalankan ulang tanpa internet, program akan berhenti dan menghasilkan pesan error koneksi (`URLError` / `gaierror`) pada baris `sp.queryAndConvert()` karena gagal menghubungi endpoint jarak jauh `https://dbpedia.org/sparql`.
 - Mengapa dbo:Film memberi 0 pada film_nolan.ttl: Karena saat membangun graf lokal melalui `CONSTRUCT` pada `q_demo_b.rq`, tipe kelas setiap film telah ditransformasikan menjadi `schema:Movie` (`?film a schema:Movie`). Akibatnya, kelas asli `dbo:Film` dari DBpedia tidak ikut tertulis di dalam berkas `film_nolan.ttl`, sehingga pencarian menggunakan `dbo:Film` menghasilkan 0 kecocokan.
 
-## Bagian C - Materialisasi
-- Output demo_d.py: [isi]
-- Mengapa Ada Rina bernilai 3: [jawaban]
-- Output materialisasi_ulang.py: [isi]
-- Tiga triple yang bukan baru: [jawaban]
-- Kegunaan kampus_turunan.ttl dan langkah manual yang tersisa: [jawaban]
+Bagian C - Materialisasi
+- Output demo_d.py: Sebelum: 0, Sesudah: 3, Ada Rina: 3
+- Mengapa Ada Rina bernilai 3: Karena materialisasi menggunakan query `CONSTRUCT` pada `rdflib` bersifat satu kali jalan (*one-shot evaluation*), bukan *live reasoner* otomatis. Saat fakta baru (`ex:rina a ex:DosenTetap`) ditambahkan ke dalam graf `g` setelah blok `CONSTRUCT` selesai dijalankan, aturan inferensi `?x a/rdfs:subClassOf* ?super` tidak dieksekusi ulang secara otomatis, sehingga triple turunan `ex:rina a foaf:Person` belum terbentuk di dalam graf `g` ketika `Q_ORANG` dijalankan.
+- Output materialisasi_ulang.py: Putaran 1: 4 triple baru | Person: 3, Rina masuk | Person: 3, Putaran 2 | Person: 4, Triple turunan disimpan terpisah: 6
+- Tiga triple yang bukan baru: `ex:budi a ex:DosenTetap`, `ex:sari a ex:Dosen`, dan `ex:andi a ex:Mahasiswa`. Ketiga triple ini ikut dihasilkan oleh query `CONSTRUCT` karena sifat refleksif operator `*` (jalur 0 langkah pada `rdfs:subClassOf*`), tetapi karena ketiganya sudah ada secara eksplisit di dalam `kampus.ttl` sejak awal, kondisi `if t not in g` menyaring ketiganya sehingga tidak dihitung sebagai triple baru (dan tidak dimasukkan ke `kampus_turunan.ttl`).
+- Kegunaan kampus_turunan.ttl dan langkah manual yang tersisa: Kegunaan `kampus_turunan.ttl` adalah memisahkan fakta hasil inferensi (6 triple turunan) dari fakta asli/eksplisit (`kampus.ttl`), sehingga data sumber tetap bersih, mudah diaudit, serta triple turunan dapat dihapus atau dibuat ulang kapan saja jika aturan hierarki kelas berubah tanpa merusak data asli. Langkah manual yang masih tersisa adalah memanggil ulang fungsi `materialisasi(g)` secara eksplisit setiap kali ada penambahan data baru (serta melakukan *re-materialization* dari awal terhadap `kampus.ttl` apabila ada penghapusan atau perubahan data lama, karena menghapus fakta dasar tidak otomatis mencabut triple turunan yang sudah telanjur disimpan).
 
 ## Bagian D - Diagnosis
 | Query | Hasil mesin | Gejala | Penyebab (baris yang salah) | Hasil setelah diperbaiki |
