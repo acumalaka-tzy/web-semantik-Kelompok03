@@ -6,7 +6,7 @@
 
 ns1:ida ns1:mengajar ns1:pti .
 
-<https://contoh.github.io/web-semantik/ISI_NIM/kampus#ISI_KELAS_DOSEN> rdfs:subClassOf <https://contoh.github.io/web-semantik/ISI_NIM/kampus#Pegawai> .
+<https://contoh.github.io/web-semantik/251402043/kampus#Kom_A> rdfs:subClassOf <https://contoh.github.io/web-semantik/251402043/kampus#Pegawai> .
 
 ex:dedy_arisandi a ex:Lecturer ;
     foaf:name "Dedy Arisandi"@id ;
@@ -38,7 +38,7 @@ ex:yazri a ex:Student ;
 
 ns1:pti foaf:name "Pengantar Teknologi Informasi"@id .
 
-<https://contoh.github.io/web-semantik/ISI_NIM/kampus#Pegawai> rdfs:subClassOf foaf:Person .
+<https://contoh.github.io/web-semantik/251402043/kampus#Pegawai> rdfs:subClassOf foaf:Person .
 
 ex:manajemen_basis_data a ex:Course ;
     foaf:name "Manajemen Basis Data"@id ;
