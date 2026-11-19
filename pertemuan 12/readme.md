@@ -29,11 +29,13 @@
 | D | OWL RL | true | false | Tidak ada fakta yang menyatakan Medan merupakan Tempat, sehingga hasil ASK adalah False. |
 
 ## Langkah 3 - Reasoner pada graf kampus
-- Berkas sumber dan IRI dasar graf: [isi]
-- Asserted / closure / inferred / bermakna: [isi] / [isi] / [isi] / [isi]
-- Triple di v4 yang tidak ada di asserted: [isi]
-- Turunan yang muncul karena domain dan range ex:mengajar: [jawaban]
-- Bila menambah dosen baru: [jawaban]
+- Berkas sumber dan IRI dasar graf:
+  - Sumber: kampus_usu_v2.ttl (Pertemuan 9).
+  - IRI dasar: https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#
+- Asserted / closure / inferred / bermakna: 40 / 101 / 61 / 5
+- Triple di v4 yang tidak ada di asserted: 2
+- Turunan yang muncul karena domain dan range ex:mengajar: Karena ex:mengajar memiliki domain ex:Kom_A dan range ex:MataKuliah, setiap subjek yang menggunakan relasi tersebut akan disimpulkan sebagai anggota kelas ex:Kom_A, sedangkan objeknya akan disimpulkan sebagai anggota kelas ex:MataKuliah.
+- Bila menambah dosen baru: Dosen baru dapat ditambahkan ke dalam graf RDF. Jika dosen tersebut dinyatakan sebagai anggota kelas dosen, reasoner RDFS dapat menyimpulkan bahwa dosen tersebut juga merupakan ex:Pegawai dan foaf:Person melalui hubungan rdfs:subClassOf. Selain itu, jika dosen tersebut memiliki relasi ex:mengajar, sistem juga dapat menyimpulkan tipe berdasarkan domain dan range yang telah ditentukan.
 
 ## Langkah 4 - Wikidata
 - ?n Q8 / Q9: 877 / 1343
