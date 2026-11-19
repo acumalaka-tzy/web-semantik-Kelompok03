@@ -6,9 +6,6 @@
 
 ns1:ida ns1:mengajar ns1:pti .
 
-ns1:mengajar rdfs:domain ns1:Kom_A ;
-    rdfs:range ns1:MataKuliah .
-
 ex:dedy_arisandi a ex:Lecturer ;
     foaf:name "Dedy Arisandi"@id ;
     ex:bernaung_di ex:teknologi_informasi ;
@@ -30,6 +27,9 @@ ex:izyan a ex:Student ;
     ex:mengambil ex:manajemen_basis_data,
         ex:web_semantik .
 
+ex:mengajar rdfs:domain ex:Lecturer ;
+    rdfs:range ex:Course .
+
 ex:yazri a ex:Student ;
     foaf:name "Yazri Khoiri"@id ;
     ex:bernaung_di ex:teknologi_informasi ;
@@ -37,11 +37,9 @@ ex:yazri a ex:Student ;
         ex:web_semantik ;
     ex:nim "251402016" .
 
-ns1:Kom_A rdfs:subClassOf ns1:Pegawai .
-
-ns1:Pegawai rdfs:subClassOf foaf:Person .
-
 ns1:pti foaf:name "Pengantar Teknologi Informasi"@id .
+
+ex:Pegawai rdfs:subClassOf foaf:Person .
 
 ex:manajemen_basis_data a ex:Course ;
     foaf:name "Manajemen Basis Data"@id ;
@@ -54,6 +52,8 @@ ex:pemrograman_web a ex:Course ;
 ex:web_semantik a ex:Course ;
     foaf:name "Web Semantik"@id ;
     ex:jumlahKredit 3 .
+
+ex:Lecturer rdfs:subClassOf ex:Pegawai .
 
 ex:teknologi_informasi a ex:Faculty ;
     foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id .

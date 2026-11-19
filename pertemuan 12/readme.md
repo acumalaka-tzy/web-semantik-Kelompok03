@@ -44,15 +44,32 @@
 - WDQS: materialisasi, saat query, atau tidak keduanya: Penalaran dilakukan saat query (query-time reasoning) secara eksplisit melalui property path P31/P279*, bukan melalui materialisasi inferensi permanen. WDQS menelusuri hubungan hierarki kelas ketika query dijalankan. Aturan RDFS9 direpresentasikan oleh pola query tersebut, bukan dijalankan secara otomatis oleh reasoner RDFS.
 
 ## Langkah 5 - Konsistensi
-- Pesan galat RDFS / OWL RL: [isi] / [isi]
-- Individu yang disebut pesan: [isi]
-- Setelah baris terbalik dihapus: [isi]
-- Isi laporan_kelas.csv sebelum dan sesudah: [isi]
-- Dari mana dosen menjadi mata kuliah: [jawaban]
+- Pesan galat RDFS / OWL RL: 0 / 2
+- Individu yang disebut pesan: `ex:ida` dan `ex:web_semantik`
+- Setelah baris terbalik dihapus: 0 pesan galat pada profil RDFS maupun OWL RL (graf kembali konsisten)[cite: 6].
+- Isi laporan_kelas.csv sebelum dan sesudah: 
+```csv
+    kelas,asserted,rdfs,owl_rl
+    Lecturer,3,4,4
+    Pegawai,0,4,4
+    Course,3,4,4
+    ```
+  - **Sesudah (setelah baris terbalik dihapus):**
+    ```csv
+    kelas,asserted,rdfs,owl_rl
+    Lecturer,3,3,3
+    Pegawai,0,3,3
+    Course,3,3,3
+    ```
+- Dari mana dosen menjadi mata kuliah: Karena properti `ex:mengajar` sudah diberi aturan `rdfs:range ex:Course` di Langkah 3, di mana triple `ex:web_semantik ex:mengajar ex:ida` dibalik, reasoner otomatis menganggap objek (`ex:ida`) bertipe `ex:Course` lewat aturan `rdfs3`. Padahal `ex:ida` itu `ex:Lecturer` yang merupakan subkelas dari `ex:Pegawai`, sementara `ex:Pegawai` sudah diatur `owl:disjointWith ex:Course`. Makanya OWL RL langsung Mendeteksi adanya konflik dan mengeluarkan pesan error. RDFS tidak memahami aturan `owl:disjointWith`, sehingga triple tersebut dianggap data biasa dan tidak mengeluarkan pesan error sama sekali.
 
 ## Refleksi
 1. Mengapa graf asserted disimpan terpisah dari graf inferred, dan apa akibatnya bila keduanya dicampur seperti kampus_usu_v4.ttl?
+Graf *asserted* merupakan sumber fakta utama yang diinput secara eksplisit, sedangkan *inferred* adalah hasil turunan mesin yang bisa dihitung ulang kapan saja. Jika keduanya digabung seperti pada `kampus_usu_v4.ttl`, saat ada fakta asli yang diubah atau dihapus (misalnya dosen tidak lagi mengajar suatu mata kuliah), triple hasil turunannya tidak ikut terhapus secara otomatis sehingga menjadi data usang (*stale data*). Selain itu, kita juga kesulitan membedakan mana data asli dan mana yang merupakan hasil inferensi reasoner.
+
 2. Pada Langkah 2, profil RDFS tidak memberi tahu bahwa aksioma OWL diabaikan. Bagaimana Anda akan memastikan profil yang dipakai sudah tepat untuk data Anda?
+Pertama, periksa terlebih dahulu kosakata atau prefix yang digunakan di dalam skema atau ontologi graf. Jika di dalam berkas `.ttl` terdapat kosakata OWL seperti `owl:TransitiveProperty`, `owl:inverseOf`, atau `owl:disjointWith`, maka wajib menggunakan profil **OWL RL**, karena RDFS hanya mengenali kosakata dasar `rdf:` dan `rdfs:`. Kedua, kita dapat melakukan pengujian kecil menggunakan skrip atau query `ASK` seperti pada Langkah 2 untuk memastikan aturan yang ditulis benar-benar dijalankan oleh reasoner.
+
 3. Kapan Anda memilih menulis jalur seperti wdt:P279* di query, dan kapan memilih menjalankan reasoner lalu menyimpan closure? 
 Saya memilih menulis jalur seperti wdt:P279* di dalam query ketika kebutuhan penalarannya sederhana, hanya digunakan sesekali, dan ingin mendapatkan hasil secara langsung tanpa menyimpan hasil inferensi terlebih dahulu.
 
