@@ -37,7 +37,7 @@
 
 ## Langkah 4 - Wikidata
 - ?n Q8 / Q9: 877 / 1343
-- Penyebab selisih: [isi]
+- Penyebab selisih: Penyebab utama selisih Q8 dan Q9 adalah adanya entitas yang termasuk instance dari subkelas universitas, tetapi tidak secara langsung memiliki tipe universitas (Q3918).
 - Satu subkelas yang menyumbang selisih: [isi]
 - WDQS: materialisasi, saat query, atau tidak keduanya: [jawaban]
 
