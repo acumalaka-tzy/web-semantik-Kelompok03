@@ -3,11 +3,22 @@
 ## Langkah 1 - Closure dengan tangan
 | # | Triple turunan | Aturan | Premis |
 |---|----------------|--------|--------|
-| [isi] | [isi] | [isi] | [isi] |
-- Jumlah triple turunan bermakna: [isi]
-- Triple yang baru ditemukan di putaran kedua: [isi]
-- Triple asserted yang tidak menurunkan apa pun, dan alasannya: [isi]
+| 1 | `ex:budi a ex:Dosen` | `rdfs2` | `ex:membimbing rdfs:domain ex:Dosen` + `ex:budi ex:membimbing ex:andi` |
+| 2 | `ex:andi a ex:Mahasiswa` | `rdfs3` | `ex:membimbing rdfs:range ex:Mahasiswa` + `ex:budi ex:membimbing ex:andi` |
+| 3 | `ex:budi ex:mengenal ex:andi` | `rdfs7` | `ex:membimbing rdfs:subPropertyOf ex:mengenal` + `ex:budi ex:membimbing ex:andi` |
+| 4 | `ex:sari a ex:Dosen` | `rdfs9` | `ex:DosenTamu rdfs:subClassOf ex:Dosen` + `ex:sari a ex:DosenTamu` |
+| 5 | `ex:DosenTamu rdfs:subClassOf ex:Pegawai` | `rdfs11` | `ex:DosenTamu rdfs:subClassOf ex:Dosen` + `ex:Dosen rdfs:subClassOf ex:Pegawai` |
+| 6 | `ex:Dosen rdfs:subClassOf ex:Orang` | `rdfs11` | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+| 7 | `ex:budi a ex:Pegawai` | `rdfs9` | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:budi a ex:Dosen` (hasil #1) |
+| 8 | `ex:andi a ex:Orang` | `rdfs9` | `ex:Mahasiswa rdfs:subClassOf ex:Orang` + `ex:andi a ex:Mahasiswa` (hasil #2) |
+| 9 | `ex:sari a ex:Pegawai` | `rdfs9` | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:sari a ex:Dosen` (hasil #4) |
+| 10 | `ex:DosenTamu rdfs:subClassOf ex:Orang` | `rdfs11` | `ex:DosenTamu rdfs:subClassOf ex:Pegawai` (hasil #5) + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+| 11 | `ex:budi a ex:Orang` | `rdfs9` | `ex:Dosen rdfs:subClassOf ex:Orang` (hasil #6) + `ex:budi a ex:Dosen` (hasil #1) |
+| 12 | `ex:sari a ex:Orang` | `rdfs9` | `ex:Dosen rdfs:subClassOf ex:Orang` (hasil #6) + `ex:sari a ex:Dosen` (hasil #4) |
 
+- Jumlah triple turunan bermakna: 12 triple (9 triple level instans/ABox dan 3 triple transitivitas `rdfs:subClassOf`/TBox).
+- Triple yang baru ditemukan di putaran kedua: `ex:budi a ex:Pegawai`, `ex:andi a ex:Orang`, `ex:sari a ex:Pegawai`, `ex:DosenTamu rdfs:subClassOf ex:Orang`, `ex:budi a ex:Orang`, dan `ex:sari a ex:Orang` (ketika seluruh aturan dijalankan paralel per putaran; jika rantai `rdfs9` ditelusuri hanya memakai fakta `subClassOf` *asserted*, maka `ex:budi a ex:Orang` dan `ex:sari a ex:Orang` baru muncul pada putaran ketiga).
+- Triple asserted yang tidak menurunkan apa pun, dan alasannya: `ex:andi a ex:MahasiswaBerprestasi`, karena kelas `ex:MahasiswaBerprestasi` tidak memiliki aksioma `rdfs:subClassOf` ke kelas mana pun (misalnya ke `ex:Mahasiswa`). Mesin RDFS memperlakukan IRI sebagai pengenal buram (*opaque identifier*) sehingga tidak dapat menyimpulkan hubungan dari kemiripan nama string.
 ## Langkah 2 - Tebak lalu cek
 | Soal | Profil | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|--------|---------|-------------|-------------------------|
