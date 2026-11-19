@@ -1,0 +1,11 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#ida> a foaf:Person,
+        <https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#Kom_A>,
+        <https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#Pegawai> .
+
+<https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#pti> a <https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#MataKuliah> .
+
+<https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#Kom_A> rdfs:subClassOf foaf:Person .
+
