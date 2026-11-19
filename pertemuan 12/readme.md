@@ -22,11 +22,11 @@
 ## Langkah 2 - Tebak lalu cek
 | Soal | Profil | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|--------|---------|-------------|-------------------------|
-| A | RDFS | [isi] | [isi] | [isi] |
-| B | OWL RL | [isi] | [isi] | [isi] |
-| C | RDFS | [isi] | [isi] | [isi] |
-| C | OWL RL | [isi] | [isi] | [isi] |
-| D | OWL RL | [isi] | [isi] | [isi] |
+| A | RDFS | 3 | 3 | Budi, Sari, dan Andi termasuk Orang melalui aturan domain, range, dan subclass. |
+| B | OWL RL | 8 | 10 | Relasi beradaDi bersifat transitif sehingga hubungan lokasi dapat diturunkan secara berantai. |
+| C | RDFS | 0 | 0 | 	RDFS tidak memahami owl:inverseOf, sehingga belum bisa menyimpulkan hubungan dibimbing. |
+| C | OWL RL | 1 | 1 | OWL RL memahami inverse property sehingga menghasilkan Andi dibimbing Budi. |
+| D | OWL RL | true | false | Tidak ada fakta yang menyatakan Medan merupakan Tempat, sehingga hasil ASK adalah False. |
 
 ## Langkah 3 - Reasoner pada graf kampus
 - Berkas sumber dan IRI dasar graf: [isi]
