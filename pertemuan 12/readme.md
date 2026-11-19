@@ -39,7 +39,7 @@
 - ?n Q8 / Q9: 877 / 1343
 - Penyebab selisih: Penyebab utama selisih Q8 dan Q9 adalah adanya entitas yang termasuk instance dari subkelas universitas, tetapi tidak secara langsung memiliki tipe universitas (Q3918).
 - Satu subkelas yang menyumbang selisih:  wd:Q845392 politeknik
-- WDQS: materialisasi, saat query, atau tidak keduanya: [jawaban]
+- WDQS: materialisasi, saat query, atau tidak keduanya: Penalaran dilakukan saat query (query-time reasoning) secara eksplisit melalui property path P31/P279*, bukan melalui materialisasi inferensi permanen. WDQS menelusuri hubungan hierarki kelas ketika query dijalankan. Aturan RDFS9 direpresentasikan oleh pola query tersebut, bukan dijalankan secara otomatis oleh reasoner RDFS.
 
 ## Langkah 5 - Konsistensi
 - Pesan galat RDFS / OWL RL: [isi] / [isi]
