@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:ida ns1:mengajar ns1:ISI_MK_BARU .
+ns1:ida ns1:mengajar ns1:pti .
 
 <https://contoh.github.io/web-semantik/ISI_NIM/kampus#ISI_KELAS_DOSEN> rdfs:subClassOf <https://contoh.github.io/web-semantik/ISI_NIM/kampus#Pegawai> .
 
@@ -36,7 +36,7 @@ ex:yazri a ex:Student ;
         ex:web_semantik ;
     ex:nim "251402016" .
 
-ns1:ISI_MK_BARU foaf:name "ISI_NAMA_MK"@id .
+ns1:pti foaf:name "Pengantar Teknologi Informasi"@id .
 
 <https://contoh.github.io/web-semantik/ISI_NIM/kampus#Pegawai> rdfs:subClassOf foaf:Person .
 
