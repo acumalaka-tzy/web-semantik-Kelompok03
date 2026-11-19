@@ -36,7 +36,7 @@
 - Bila menambah dosen baru: [jawaban]
 
 ## Langkah 4 - Wikidata
-- ?n Q8 / Q9: 877 / [isi]
+- ?n Q8 / Q9: 877 / 1343
 - Penyebab selisih: [isi]
 - Satu subkelas yang menyumbang selisih: [isi]
 - WDQS: materialisasi, saat query, atau tidak keduanya: [jawaban]
