@@ -3,7 +3,7 @@
 @prefix ns1: <https://Zann-37.github.io/web-semantik-kelompok03/251402110/kampus#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:ida ns1:mengajar ns1:ISI_MK_BARU .
+ns1:ida ns1:mengajar ns1:pti .
 
 ex:dedy_arisandi a ex:Lecturer ;
     foaf:name "Dedy Arisandi"@id ;
@@ -33,7 +33,7 @@ ex:yazri a ex:Student ;
         ex:web_semantik ;
     ex:nim "251402016" .
 
-ns1:ISI_MK_BARU foaf:name "ISI_NAMA_MK"@id .
+ns1:pti foaf:name "Pengantar Teknologi Informasi"@id .
 
 ex:manajemen_basis_data a ex:Course ;
     foaf:name "Manajemen Basis Data"@id ;
